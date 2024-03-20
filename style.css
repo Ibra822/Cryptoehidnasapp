@@ -33,6 +33,17 @@ nav a {
     z-index: 2;
     position: relative;
     backdrop-filter: blur(8px);
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 50px; /* Дополнительное пространство для таймера */
+}
+
+.timer {
+    margin-bottom: 30px;
+    background: rgba(0, 0, 0, 0.75); /* Полупрозрачный черный фон для таймера */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .neon-text {
@@ -47,8 +58,6 @@ nav a {
         0 0 60px #20FC8F;
     animation: neon 1.5s ease-in-out infinite alternate;
     font-size: 32px; /* Увеличенный размер для лучшей видимости */
-    position: relative;
-    z-index: 9;
 }
 
 @keyframes neon {
@@ -86,7 +95,6 @@ nav a {
     text-transform: uppercase;
     transition: transform 0.3s ease, background-color 0.3s ease;
     z-index: 9;
-    margin-top: 20px; /* Отступ сверху */
 }
 
 .copy-address-btn:hover {
@@ -94,17 +102,10 @@ nav a {
     transform: scale(1.1);
 }
 
-.timer {
-    position: absolute;
-    top: 10%; /* Положение таймера на экране */
-    z-index: 9;
-    width: 100%;
-    text-align: center;
-}
-
 @media (max-width: 768px) {
     .hero {
         width: 95%;
+        margin-top: 20px; /* Меньше пространства сверху на мобильных */
     }
 
     .neon-text {
