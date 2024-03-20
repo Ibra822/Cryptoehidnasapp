@@ -2,7 +2,7 @@ body, html {
     font-family: 'Press Start 2P', cursive;
     height: 100%;
     margin: 0;
-    background: url('background.png') no-repeat center center fixed; 
+    background: url('background.png') no-repeat center center fixed;
     background-size: cover;
     overflow-x: hidden;
 }
@@ -19,7 +19,7 @@ body, html {
 }
 
 nav {
-    background-color: #0E3449; /* Темный синий фон */
+    background-color: #003366; /* Темный синий фон */
     padding: 10px;
     text-align: center;
     position: fixed;
@@ -29,54 +29,16 @@ nav {
 }
 
 nav a {
-    color: #20FC8F; /* Светлый зеленый текст */
+    color: #00BFFF; /* Светло-синий текст */
     text-decoration: none;
     margin: 0 15px;
     font-size: 16px;
 }
 
 .hero {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    z-index: 2;
-}
-
-.text-background {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.75);
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    color: #00BFFF;
-    text-shadow: 2px 2px #000000;
-    font-size: 32px; /* Увеличенный размер шрифта */
-}
-
-.copy-address-btn {
-    padding: 20px 40px;
-    background-color: #20FC8F; /* Светлый зеленый, как у ссылок навигации */
-    color: #0E3449; /* Темный синий текст */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-family: 'Press Start 2P', cursive;
-    text-transform: uppercase;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    z-index: 3;
-}
-
-.copy-address-btn:hover {
-    background-color: #1FBF7F; /* Немного темнее зеленого при наведении */
-    transform: scale(1.1);
-}
-
-#timer {
-    z-index: 2;
-}
+   
