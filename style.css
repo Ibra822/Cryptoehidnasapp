@@ -1,70 +1,60 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Baloo 2', cursive;
-    background-image: url('background.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #282828;
+    color: #ffffff;
 }
 
 .header {
-    background-color: white;
+    background-color: #101010;
+    padding: 10px 0;
+    text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
-    left: 0;
-    padding: 10px 0;
-    text-align: center;
-    z-index: 1000;
+    z-index: 100;
 }
 
-.menu_button {
-    color: black;
+.menu-button {
+    color: #ffffff;
     text-decoration: none;
     margin: 0 15px;
-    font-weight: 800;
+    font-size: 14px;
 }
 
-.menu_button:hover {
+.menu-button:hover {
     text-decoration: underline;
+}
+
+.main-content {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.copy-address-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.copy-address-btn:hover {
+    background-color: #0056b3;
 }
 
 .social-icons {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
+    right: 10px;
+    top: 50px;
 }
 
-.tg, .twitter {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-size: cover;
-    margin-left: 10px;
-}
-
-.tg { background-image: url('images/telegram-icon.png'); }
-.twitter { background-image: url('images/twitter-icon.png'); }
-
-.main-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.copy-address {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.copy-address:hover {
-    background-color: #0056b3;
+.social-icon {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 10px;
 }
