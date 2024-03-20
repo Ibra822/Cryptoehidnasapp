@@ -1,8 +1,10 @@
+# Полный CSS код для вставки в консоль
+css_code_full = """
 body, html {
     font-family: 'Press Start 2P', cursive;
     height: 100%;
     margin: 0;
-    background: url('background.png') no-repeat center center fixed;
+    background: url('background.png') no-repeat center center fixed; 
     background-size: cover;
     overflow-x: hidden;
 }
@@ -47,7 +49,7 @@ nav a {
 
 .timer {
     position: absolute;
-    top: -50px; /* Поднимаем таймер выше */
+    top: -100px; /* Поднимаем таймер выше, с небольшим отступом от заголовка */
     z-index: 3;
 }
 
@@ -62,9 +64,7 @@ nav a {
         0 0 50px #20FC8F,
         0 0 60px #20FC8F;
     animation: neon 1.5s ease-in-out infinite alternate;
-    font-size: 48px; /* Увеличенный размер для лучшей читаемости */
-    margin-bottom: 20px; /* Отступ для таймера */
-    z-index: 2;
+    font-size: 32px; /* Увеличенный размер для лучшей видимости */
 }
 
 @keyframes neon {
@@ -91,13 +91,13 @@ nav a {
 }
 
 .copy-address-btn {
-    padding: 20px 40px;
-    background-color: #00BFFF; /* Светло-синий */
+    padding: 15px 30px;
+    background-color: #00BFFF; /* Светло-синий фон */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 24px; /* Увеличенный размер для лучшей видимости */
+    font-size: 16px;
     font-family: 'Press Start 2P', cursive;
     text-transform: uppercase;
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -108,4 +108,6 @@ nav a {
     background-color: #007bff; /* Темно-синий при наведении */
     transform: scale(1.1);
 }
+"""
 
+css_code_full
