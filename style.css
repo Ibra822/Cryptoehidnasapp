@@ -32,18 +32,10 @@ nav a {
     height: 100vh;
     z-index: 2;
     position: relative;
-    backdrop-filter: blur(8px);
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 50px; /* Дополнительное пространство для таймера */
 }
 
-.timer {
-    margin-bottom: 30px;
-    background: rgba(0, 0, 0, 0.75); /* Полупрозрачный черный фон для таймера */
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+.timer-wrapper {
+    margin-bottom: 20px; /* Отступ для таймера */
 }
 
 .neon-text {
