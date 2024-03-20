@@ -1,60 +1,42 @@
 body, html {
-    margin: 0;
-    padding: 0;
     font-family: 'Press Start 2P', cursive;
-    background-color: #282828;
-    color: #ffffff;
+    height: 100%;
+    margin: 0;
+    background: url('background.png') no-repeat center center fixed; 
+    background-size: cover;
 }
 
-.header {
-    background-color: #101010;
-    padding: 10px 0;
+nav {
+    background-color: rgba(255,255,255,0.9);
+    padding: 10px;
     text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 100;
 }
 
-.menu-button {
-    color: #ffffff;
+nav a {
+    color: #000;
     text-decoration: none;
     margin: 0 15px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
-.menu-button:hover {
-    text-decoration: underline;
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-.main-content {
-    text-align: center;
-    padding-top: 60px;
-}
-
-.copy-address-btn {
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
+#copyButton {
+    margin-top: 20px;
     padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 20px;
-}
-
-.copy-address-btn:hover {
-    background-color: #0056b3;
-}
-
-.social-icons {
-    position: fixed;
-    right: 10px;
-    top: 50px;
-}
-
-.social-icon {
-    display: block;
-    color: #ffffff;
-    text-decoration: none;
-    margin-bottom: 10px;
 }
