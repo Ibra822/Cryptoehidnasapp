@@ -1,3 +1,6 @@
+# Обновим CSS, чтобы улучшить видимость надписи "Cryptoehidnas Presale" на фоне и позиционирование элементов
+
+css_code_updated = """
 body, html {
     font-family: 'Press Start 2P', cursive;
     height: 100%;
@@ -8,17 +11,17 @@ body, html {
 }
 
 nav {
-    background-color: #003366;
+    background-color: #003366; /* Темный синий фон */
     padding: 10px;
     text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 3;
+    z-index: 10;
 }
 
 nav a {
-    color: #00BFFF;
+    color: #00BFFF; /* Светло-синий текст */
     text-decoration: none;
     margin: 0 15px;
     font-size: 16px;
@@ -32,36 +35,51 @@ nav a {
     height: 100vh;
     z-index: 2;
     position: relative;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 500px;
-    margin: auto;
+    backdrop-filter: blur(8px);
 }
 
 .neon-text {
-    color: #00BFFF;
-    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF, 0 0 60px #00BFFF;
+    color: #20FC8F;
+    text-shadow:
+        0 0 5px #FFF,
+        0 0 10px #FFF,
+        0 0 20px #20FC8F,
+        0 0 30px #20FC8F,
+        0 0 40px #20FC8F,
+        0 0 50px #20FC8F,
+        0 0 60px #20FC8F;
     animation: neon 1.5s ease-in-out infinite alternate;
-    font-size: 32px;
+    font-size: 32px; /* Увеличенный размер для лучшей видимости */
+    position: relative;
+    z-index: 9;
 }
 
 @keyframes neon {
     from {
-        color: #00BFFF;
-        text-shadow: 0 0 10px #FFF, 0 0 20px #FFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF, 0 0 60px #00BFFF, 0 0 70px #00BFFF;
+        text-shadow:
+            0 0 10px #FFF,
+            0 0 20px #FFF,
+            0 0 30px #20FC8F,
+            0 0 40px #20FC8F,
+            0 0 50px #20FC8F,
+            0 0 60px #20FC8F,
+            0 0 70px #20FC8F;
     }
     to {
-        color: #FF00FF;
-        text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FF00FF, 0 0 20px #FF00FF, 0 0 25px #FF00FF, 0 0 30px #FF00FF, 0 0 35px #FF00FF;
+        text-shadow:
+            0 0 5px #FFF,
+            0 0 10px #FFF,
+            0 0 15px #20FC8F,
+            0 0 20px #20FC8F,
+            0 0 25px #20FC8F,
+            0 0 30px #20FC8F,
+            0 0 35px #20FC8F;
     }
 }
 
 .copy-address-btn {
     padding: 15px 30px;
-    background-color: #00BFFF;
+    background-color: #00BFFF; /* Светло-синий фон */
     color: white;
     border: none;
     border-radius: 5px;
@@ -70,13 +88,21 @@ nav a {
     font-family: 'Press Start 2P', cursive;
     text-transform: uppercase;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    z-index: 2;
-    margin-top: 20px;
+    z-index: 9;
+    margin-top: 20px; /* Отступ сверху */
 }
 
 .copy-address-btn:hover {
-    background-color: #007bff;
+    background-color: #007bff; /* Темно-синий при наведении */
     transform: scale(1.1);
+}
+
+.timer {
+    position: absolute;
+    top: 10%; /* Положение таймера на экране */
+    z-index: 9;
+    width: 100%;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -85,6 +111,6 @@ nav a {
     }
 
     .neon-text {
-        font-size: 24px;
+        font-size: 24px; /* Меньший размер шрифта на мобильных устройствах */
     }
 }
