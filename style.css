@@ -1,5 +1,5 @@
 body, html {
-    background-image: url('background.jpg');
+    background-image: url('background.png');
     background-size: cover; /* Покрыть весь экран, сохраняя пропорции */
     background-position: center; /* Центрировать изображение */
 }
