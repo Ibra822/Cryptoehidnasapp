@@ -1,6 +1,3 @@
-# Обновим CSS, чтобы улучшить видимость надписи "Cryptoehidnas Presale" на фоне и позиционирование элементов
-
-css_code_updated = """
 body, html {
     font-family: 'Press Start 2P', cursive;
     height: 100%;
