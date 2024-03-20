@@ -2,7 +2,7 @@ body, html {
     font-family: 'Press Start 2P', cursive;
     height: 100%;
     margin: 0;
-    background: url('background.png') no-repeat center center fixed; 
+    background: url('your-background-image.jpg') no-repeat center center fixed; 
     background-size: cover;
 }
 
@@ -30,13 +30,20 @@ nav a {
     height: 100vh;
 }
 
-#copyButton {
-    margin-top: 20px;
-    padding: 10px 20px;
+.copy-address-btn {
+    padding: 20px 40px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.copy-address-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
 }
