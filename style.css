@@ -1,10 +1,15 @@
 body, html {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url('background.png');
+    background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header {
@@ -28,16 +33,6 @@ body, html {
     text-decoration: underline;
 }
 
-.container {
-    position: relative;
-    margin: auto;
-    padding: 20px;
-    max-width: 600px;
-    text-align: center;
-    top: 50px; /* Смещение вниз, чтобы не перекрывалось шапкой */
-    transform: translateY(-50%);
-}
-
 .social-icons {
     position: fixed;
     top: 20px;
@@ -50,4 +45,34 @@ body, html {
     margin-left: 10px;
     color: #000;
     text-decoration: none;
+}
+
+.main-content {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#copy-address-btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+#copy-address-btn:hover {
+    background-color: #45a049;
+}
+
+#wallet-address {
+    display: none;
 }
