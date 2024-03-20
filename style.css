@@ -1,5 +1,3 @@
-# Полный CSS код для вставки в консоль
-css_code_full = """
 body, html {
     font-family: 'Press Start 2P', cursive;
     height: 100%;
@@ -108,6 +106,3 @@ nav a {
     background-color: #007bff; /* Темно-синий при наведении */
     transform: scale(1.1);
 }
-"""
-
-css_code_full
