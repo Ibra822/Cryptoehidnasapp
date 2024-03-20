@@ -41,4 +41,73 @@ nav a {
     align-items: center;
     justify-content: center;
     height: 100vh;
-   
+   z-index: 2;
+position: relative;
+}
+
+.timer {
+position: absolute;
+top: -50px; /* Поднимаем таймер выше */
+}
+
+.neon-text {
+color: #20FC8F;
+text-shadow:
+0 0 5px #FFF,
+0 0 10px #FFF,
+0 0 20px #20FC8F,
+0 0 30px #20FC8F,
+0 0 40px #20FC8F,
+0 0 50px #20FC8F,
+0 0 60px #20FC8F;
+animation: neon 1.5s ease-in-out infinite alternate;
+font-size: 2em;
+margin-bottom: 20px; /* Отступ, чтобы таймер не был слишком близко */
+}
+
+@keyframes neon {
+from {
+text-shadow:
+0 0 10px #FFF,
+0 0 20px #FFF,
+0 0 30px #20FC8F,
+0 0 40px #20FC8F,
+0 0 50px #20FC8F,
+0 0 60px #20FC8F,
+0 0 70px #20FC8F;
+}
+to {
+text-shadow:
+0 0 5px #FFF,
+0 0 10px #FFF,
+0 0 15px #20FC8F,
+0 0 20px #20FC8F,
+0 0 25px #20FC8F,
+0 0 30px #20FC8F,
+0 0 35px #20FC8F;
+}
+}
+
+.copy-address-btn {
+padding: 15px 30px;
+background-color: #0E3449; /* Темно-синий фон, как у nav */
+color: white;
+border: none;
+border-radius:
+
+5px;
+cursor: pointer;
+font-size: 1em; /* Размер шрифта увеличен для лучшей видимости /
+font-family: 'Press Start 2P', cursive;
+text-transform: uppercase;
+transition: transform 0.3s ease, background-color 0.3s ease;
+box-shadow: 0 0 10px #FFF, 0 0 20px #FFF, 0 0 30px #00BFFF;
+z-index: 2;
+margin-top: 20px; / Отступ сверху для разделения текста и кнопки */
+}
+
+.copy-address-btn:hover {
+background-color: #00BFFF; /* Светло-синий при наведении /
+box-shadow: 0 0 20px #FFF, 0 0 30px #FFF, 0 0 40px #00BFFF;
+transform: scale(1.1); / Увеличение при наведении */
+}
