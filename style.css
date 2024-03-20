@@ -7,16 +7,17 @@ body, html {
 }
 
 nav {
-    background-color: rgba(255,255,255,0.9);
+    background-color: #0E3449; /* Темный синий фон */
     padding: 10px;
     text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
+    font-weight: bold;
 }
 
 nav a {
-    color: #000;
+    color: #20FC8F; /* Светлый зеленый текст */
     text-decoration: none;
     margin: 0 15px;
     font-size: 16px;
@@ -32,7 +33,7 @@ nav a {
 
 .copy-address-btn {
     padding: 20px 40px;
-    background-color: #007bff;
+    background-color: #00BFFF; /* Светло-синий */
     color: white;
     border: none;
     border-radius: 5px;
@@ -44,6 +45,6 @@ nav a {
 }
 
 .copy-address-btn:hover {
-    background-color: #0056b3;
+    background-color: #007bff; /* Темно-синий при наведении */
     transform: scale(1.1);
 }
