@@ -75,18 +75,23 @@ nav a {
     }
 }
 
-.copy-address-btn {
-    padding: 15px 30px;
-    background-color: #00BFFF; /* Светло-синий фон */
-    color: white;
+..copy-address-btn {
+    background-color: #003366; /* Темно-синий, подходит к цвету About и Tokenomics */
+    color: #7FFF00; /* Светло-зеленый, хорошо читается на темном фоне */
     border: none;
+    box-shadow: 0 0 5px #7FFF00; /* Светло-зеленое свечение для привлекательности */
+    padding: 15px 30px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
     font-family: 'Press Start 2P', cursive;
     text-transform: uppercase;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    z-index: 9;
+    font-size: 1em; /* Или другой размер, который лучше подойдет */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.copy-address-btn:hover {
+    background-color: #00BFFF; /* Светло-синий цвет при наведении */
+    transform: scale(1.1);
 }
 
 .copy-address-btn:hover {
