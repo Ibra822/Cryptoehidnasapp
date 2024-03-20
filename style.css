@@ -4,6 +4,18 @@ body, html {
     margin: 0;
     background: url('background.png') no-repeat center center fixed; 
     background-size: cover;
+    overflow-x: hidden;
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    z-index: 1;
 }
 
 nav {
@@ -13,9 +25,10 @@ nav {
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 3;
 }
 
-.nav-button {
+nav a {
     color: #20FC8F; /* Светлый зеленый текст */
     text-decoration: none;
     margin: 0 15px;
@@ -23,31 +36,47 @@ nav {
 }
 
 .hero {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    z-index: 2;
+}
+
+.text-background {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    color: #00BFFF;
+    text-shadow: 2px 2px #000000;
+    font-size: 32px; /* Увеличенный размер шрифта */
 }
 
 .copy-address-btn {
     padding: 20px 40px;
-    background-color: #00BFFF; /* Светло-синий */
-    color: white;
+    background-color: #20FC8F; /* Светлый зеленый, как у ссылок навигации */
+    color: #0E3449; /* Темный синий текст */
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
     font-family: 'Press Start 2P', cursive;
     text-transform: uppercase;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    font-size: 24px; /* Увеличенный размер шрифта для привлекательности */
+    z-index: 3;
 }
 
 .copy-address-btn:hover {
-    background-color: #007bff; /* Темно-синий при наведении */
+    background-color: #1FBF7F; /* Немного темнее зеленого при наведении */
     transform: scale(1.1);
 }
 
-.timer-script {
-    margin-bottom: 20px;
+#timer {
+    z-index: 2;
 }
