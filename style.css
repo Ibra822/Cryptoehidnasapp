@@ -59,54 +59,53 @@ nav a {
         0 0 20px #20FC8F,
         0 0 30px #20FC8F,
         0 0 40px #20FC8F,
-        0 0
-50px #20FC8F,
-0 0 60px #20FC8F;
-animation: neon 1.5s ease-in-out infinite alternate;
-font-size: 3em; /* Увеличенный размер для лучшей читаемости /
-margin-bottom: 20px; / Отступ, чтобы таймер не был слишком близко */
+        0 0 50px #20FC8F,
+        0 0 60px #20FC8F;
+    animation: neon 1.5s ease-in-out infinite alternate;
+    font-size: 48px; /* Увеличенный размер для лучшей читаемости */
+    margin-bottom: 20px; /* Отступ для таймера */
+    z-index: 2;
 }
 
 @keyframes neon {
-from {
-text-shadow:
-0 0 10px #FFF,
-0 0 20px #FFF,
-0 0 30px #20FC8F,
-0 0 40px #20FC8F,
-0 0 50px #20FC8F,
-0 0 60px #20FC8F,
-0 0 70px #20FC8F;
-}
-to {
-text-shadow:
-0 0 5px #FFF,
-0 0 10px #FFF,
-0 0 15px #20FC8F,
-0 0 20px #20FC8F,
-0 0 25px #20FC8F,
-0 0 30px #20FC8F,
-0 0 35px #20FC8F;
-}
+    from {
+        text-shadow:
+            0 0 10px #FFF,
+            0 0 20px #FFF,
+            0 0 30px #20FC8F,
+            0 0 40px #20FC8F,
+            0 0 50px #20FC8F,
+            0 0 60px #20FC8F,
+            0 0 70px #20FC8F;
+    }
+    to {
+        text-shadow:
+            0 0 5px #FFF,
+            0 0 10px #FFF,
+            0 0 15px #20FC8F,
+            0 0 20px #20FC8F,
+            0 0 25px #20FC8F,
+            0 0 30px #20FC8F,
+            0 0 35px #20FC8F;
+    }
 }
 
 .copy-address-btn {
-padding: 20px 40px;
-background-color: #00BFFF; /* Светло-синий, как у nav a /
-color: white;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-font-size: 1.5em; / Увеличенный размер шрифта для кнопки */
-font-family: 'Press Start 2P', cursive;
-text-transform: uppercase;
-transition: transform 0.3s ease, background-color 0.3s ease;
-box-shadow: 0 0 10px #FFF, 0 0 20px #FFF, 0 0 30px #00BFFF;
-z-index: 3;
+    padding: 20px 40px;
+    background-color: #00BFFF; /* Светло-синий */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px; /* Увеличенный размер для лучшей видимости */
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 2;
 }
 
 .copy-address-btn:hover {
-background-color: #007bff; /* Темно-синий при наведении */
-box-shadow: 0 0 20px #FFF, 0 0 30px #FFF, 0 0 40px #00BFFF;
-transform: scale(1.1);
+    background-color: #007bff; /* Темно-синий при наведении */
+    transform: scale(1.1);
 }
+
