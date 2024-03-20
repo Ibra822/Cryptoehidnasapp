@@ -7,19 +7,8 @@ body, html {
     overflow-x: hidden;
 }
 
-.background-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.5);
-    pointer-events: none;
-    z-index: 1;
-}
-
 nav {
-    background-color: #003366; /* Темный синий фон */
+    background-color: #003366;
     padding: 10px;
     text-align: center;
     position: fixed;
@@ -29,7 +18,7 @@ nav {
 }
 
 nav a {
-    color: #00BFFF; /* Светло-синий текст */
+    color: #00BFFF;
     text-decoration: none;
     margin: 0 15px;
     font-size: 16px;
@@ -43,54 +32,36 @@ nav a {
     height: 100vh;
     z-index: 2;
     position: relative;
-}
-
-.timer {
-    position: absolute;
-    top: -100px; /* Поднимаем таймер выше, с небольшим отступом от заголовка */
-    z-index: 3;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    margin: auto;
 }
 
 .neon-text {
-    color: #20FC8F;
-    text-shadow:
-        0 0 5px #FFF,
-        0 0 10px #FFF,
-        0 0 20px #20FC8F,
-        0 0 30px #20FC8F,
-        0 0 40px #20FC8F,
-        0 0 50px #20FC8F,
-        0 0 60px #20FC8F;
+    color: #00BFFF;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF, 0 0 60px #00BFFF;
     animation: neon 1.5s ease-in-out infinite alternate;
-    font-size: 32px; /* Увеличенный размер для лучшей видимости */
+    font-size: 32px;
 }
 
 @keyframes neon {
     from {
-        text-shadow:
-            0 0 10px #FFF,
-            0 0 20px #FFF,
-            0 0 30px #20FC8F,
-            0 0 40px #20FC8F,
-            0 0 50px #20FC8F,
-            0 0 60px #20FC8F,
-            0 0 70px #20FC8F;
+        color: #00BFFF;
+        text-shadow: 0 0 10px #FFF, 0 0 20px #FFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF, 0 0 60px #00BFFF, 0 0 70px #00BFFF;
     }
     to {
-        text-shadow:
-            0 0 5px #FFF,
-            0 0 10px #FFF,
-            0 0 15px #20FC8F,
-            0 0 20px #20FC8F,
-            0 0 25px #20FC8F,
-            0 0 30px #20FC8F,
-            0 0 35px #20FC8F;
+        color: #FF00FF;
+        text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FF00FF, 0 0 20px #FF00FF, 0 0 25px #FF00FF, 0 0 30px #FF00FF, 0 0 35px #FF00FF;
     }
 }
 
 .copy-address-btn {
     padding: 15px 30px;
-    background-color: #00BFFF; /* Светло-синий фон */
+    background-color: #00BFFF;
     color: white;
     border: none;
     border-radius: 5px;
@@ -100,9 +71,20 @@ nav a {
     text-transform: uppercase;
     transition: transform 0.3s ease, background-color 0.3s ease;
     z-index: 2;
+    margin-top: 20px;
 }
 
 .copy-address-btn:hover {
-    background-color: #007bff; /* Темно-синий при наведении */
+    background-color: #007bff;
     transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        width: 95%;
+    }
+
+    .neon-text {
+        font-size: 24px;
+    }
 }
