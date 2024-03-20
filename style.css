@@ -13,10 +13,9 @@ nav {
     position: fixed;
     width: 100%;
     top: 0;
-    font-weight: bold;
 }
 
-nav a {
+.nav-button {
     color: #20FC8F; /* Светлый зеленый текст */
     text-decoration: none;
     margin: 0 15px;
@@ -38,13 +37,17 @@ nav a {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
     font-family: 'Press Start 2P', cursive;
     text-transform: uppercase;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 24px; /* Увеличенный размер шрифта для привлекательности */
 }
 
 .copy-address-btn:hover {
     background-color: #007bff; /* Темно-синий при наведении */
     transform: scale(1.1);
+}
+
+.timer-script {
+    margin-bottom: 20px;
 }
