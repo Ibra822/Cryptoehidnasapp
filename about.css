@@ -3,44 +3,45 @@
 body, html {
     margin: 0;
     padding: 0;
-    background: url('background2.png') no-repeat center center fixed; 
+    background: url('background2.png') no-repeat center center fixed;
     background-size: cover;
 }
 
 nav {
     background-color: #003366; /* Темный синий фон */
-    padding: 10px;
+    padding: 10px 0;
     text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 10;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Обеспечивает размещение элементов по краям */
     align-items: center;
 }
 
-nav .menu-items {
+nav .menu-links {
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-nav .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-grow: 1; /* Заставляет ссылки занимать доступное пространство */
 }
 
 nav a {
     color: #00BFFF; /* Цвет текста ссылок */
     text-decoration: none;
-    margin: 0 20px;
-    font-family: 'Press Start 2P', cursive; /* Подтверждаем использование пиксельного шрифта для меню */
+    margin: 0 15px; /* Уменьшите отступ, если необходимо */
+    font-family: 'Press Start 2P', cursive;
 }
 
-nav a i {
-    margin: 0 10px;
+nav .social-links {
+    display: flex;
+    justify-content: flex-end; /* Выравнивание иконок соцсетей по правому краю */
+}
+
+nav .social-links i {
+    color: #FFFFFF; /* Цвет иконок */
+    font-size: 24px;
+    margin-left: 20px; /* Отступ между иконками */
 }
 
 .text-box {
@@ -58,5 +59,8 @@ nav a i {
 @media (max-width: 768px) {
     .text-box {
         margin: 80px 20px;
+    }
+    nav .social-links i {
+        margin-left: 10px; /* Уменьшение отступа между иконками на мобильных устройствах */
     }
 }
