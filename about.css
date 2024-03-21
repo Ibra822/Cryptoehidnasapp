@@ -1,17 +1,35 @@
-.about-background {
-    /* Предполагается, что вы уже задали фон для страницы About */
+/* Общие стили для навигации */
+nav {
+    background-color: #003366; /* Темный синий фон */
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Убедитесь, что навигация всегда наверху */
 }
 
+nav a {
+    color: #00BFFF; /* Светло-синий текст */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FFFFFF; /* Белый цвет при наведении */
+}
+
+/* Стили для текстового бокса страницы About */
 .text-box {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     padding: 20px;
-    margin: 40px auto;
+    margin: 80px auto 20px; /* Добавьте отступ сверху, чтобы текст не перекрывался навигацией */
     max-width: 800px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
     animation: appear 1s ease-out forwards;
-    font-family: 'Press Start 2P', cursive;
 }
 
 @keyframes appear {
@@ -19,20 +37,18 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
+h1, p {
+    font-family: 'Press Start 2P', cursive; /* Пиксельный шрифт для всего текста */
+}
+
 h1 {
     text-align: center;
-    font-size: 24px;
+    font-size: 24px; /* Адаптируйте размеры под ваш дизайн */
 }
 
 p {
-    font-size: 16px; /* Подстройте под нужный размер */
+    font-size: 16px; /* Адаптируйте размеры под ваш дизайн */
     margin: 15px 0;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-    .text-box {
-        padding: 15px;
-        margin: 20px;
-    }
-}
+/* Добавьте медиа-запросы для адаптивности при необходимости */
