@@ -1,5 +1,6 @@
 body, html {
     font-family: 'Press Start 2P', cursive;
+    height: 100%;
     margin: 0;
     padding: 0;
     background: url('background2.png') no-repeat center center fixed;
@@ -7,28 +8,36 @@ body, html {
 }
 
 nav {
-    background-color: #000; /* Или любой цвет, который вы используете в главном меню */
+    background-color: #000000; /* Adjust to match the main menu */
     padding: 10px 0;
     text-align: center;
-    position: fixed;
     width: 100%;
     top: 0;
+    position: fixed;
     z-index: 10;
 }
 
 nav a {
-    color: #fff; /* Или любой цвет, который вы используете для текста в главном меню */
+    color: #ffffff; /* Adjust to match the main menu */
     text-decoration: none;
-    margin: 0 25px;
-    font-size: 20px; /* Адаптируйте размер под ваш дизайн */
+    margin: 0 20px;
 }
 
 .text-box {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 20px;
-    margin: 60px auto 20px; /* Увеличьте верхний отступ, чтобы учесть фиксированное меню */
+    margin: 100px auto; /* Increased top margin to account for fixed header */
     max-width: 800px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: justify;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+ul {
+    text-align: left;
+    list-style-position: inside;
 }
