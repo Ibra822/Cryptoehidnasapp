@@ -3,7 +3,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    background: url('path_to_your_about_background.jpg') no-repeat center center fixed; 
+    background: url('background2.png') no-repeat center center fixed; 
     background-size: cover;
 }
 
