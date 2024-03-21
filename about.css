@@ -1,51 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body, html {
     margin: 0;
     padding: 0;
-    background: url('background2.png') no-repeat center center fixed; 
+    background: url('path_to_your_about_background.jpg') no-repeat center center fixed; 
     background-size: cover;
-    font-family: 'VT323', monospace; /* VT323 для основного текста */
 }
 
 nav {
-    background-color: #000; /* Цвет фона меню */
+    background-color: #000; /* Установите точный цвет фона, как на главной странице */
     padding: 10px 0;
     text-align: center;
     width: 100%;
     top: 0;
     position: fixed;
     z-index: 10;
-    font-family: 'Press Start 2P', cursive; /* Вернуть к изначальному пиксельному шрифту для меню */
+    font-family: 'Press Start 2P', cursive;
 }
 
 nav a {
-    color: #fff; /* Цвет текста кнопок меню */
+    color: #fff; /* Установите точный цвет текста, как на главной странице */
     text-decoration: none;
     margin: 0 20px;
-    font-size: 16px; /* или другой размер, который вы использовали */
+    font-size: 16px; /* Подстройте под ваш дизайн */
 }
 
 .text-box {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 20px;
-    margin: 100px auto; /* Увеличенный отступ сверху для меню */
+    margin: 100px auto;
     max-width: 800px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: justify;
-    font-family: 'VT323', monospace; /* VT323 для текста в боксе */
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.5;
 }
 
-/* Стили для заголовков внутри .text-box, если нужно использовать VT323 */
-.text-box h1, .text-box h2, .text-box h3 {
-    font-family: 'VT323', monospace;
-}
-
-/* Стили для адаптации под мобильные устройства */
 @media (max-width: 768px) {
     .text-box {
-        margin: 80px 20px; /* Уменьшенные отступы для мобильных устройств */
+        margin: 80px 20px;
     }
 }
