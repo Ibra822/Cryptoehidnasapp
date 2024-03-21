@@ -12,3 +12,27 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
+@keyframes pixelate {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.text-box {
+    background: rgba(255, 255, 255, 0.9); /* Светлый полупрозрачный фон */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: 'Press Start 2P', cursive; /* Пиксельный шрифт */
+    animation: pixelate 0.5s ease-out forwards; /* Применение анимации */
+}
+
+/* Дополнительные стили... */
