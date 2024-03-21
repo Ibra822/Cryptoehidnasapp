@@ -3,43 +3,42 @@
 body, html {
     margin: 0;
     padding: 0;
-    background: url('path_to_your_tokenomics_background.jpg') no-repeat center center fixed; 
+    background: url('background2.png') no-repeat center center fixed;
     background-size: cover;
-    font-family: 'Press Start 2P', cursive; /* Возвращаемся к первоначальному пиксельному шрифту */
 }
 
 nav {
-    background-color: #000; /* Убедитесь, что цвет соответствует главному меню */
+    background-color: #000; /* Цвет фона, идентичен главной странице */
     padding: 10px 0;
     text-align: center;
     width: 100%;
     top: 0;
     position: fixed;
     z-index: 10;
+    font-family: 'Press Start 2P', cursive; /* Шрифт, идентичен главной странице */
 }
 
 nav a {
-    color: #fff; /* Убедитесь, что цвет соответствует главному меню */
+    color: #fff; /* Цвет текста, идентичен главной странице */
     text-decoration: none;
     margin: 0 20px;
-    font-family: 'Press Start 2P', cursive; /* Уточнение шрифта для соответствия главному меню */
 }
 
 .text-box {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 20px;
-    margin: 100px auto; /* Увеличенный отступ сверху из-за фиксированного меню */
+    margin: 100px auto; /* Увеличенный отступ сверху для меню */
     max-width: 800px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: justify;
-    font-size: 16px; /* Адаптируйте размер шрифта по предпочтениям */
-    line-height: 1.5; /* Увеличенное расстояние между строками для улучшения читаемости */
+    font-family: 'Press Start 2P', cursive; /* Возвращаем к изначальному шрифту */
+    font-size: 16px; /* Размер шрифта по вашему выбору */
+    line-height: 1.5; /* Увеличенное расстояние между строками */
 }
 
-/* Адаптация под мобильные устройства */
 @media (max-width: 768px) {
     .text-box {
-        margin: 80px 20px; /* Уменьшенные боковые отступы для мобильных устройств */
+        margin: 80px 20px; /* Уменьшенные отступы для мобильных устройств */
     }
 }
