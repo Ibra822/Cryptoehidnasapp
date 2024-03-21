@@ -1,65 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body, html {
-    font-family: 'Press Start 2P', cursive; /* Пиксельный шрифт для всей страницы */
-    height: 100%;
     margin: 0;
+    padding: 0;
     background: url('background2.png') no-repeat center center fixed; 
     background-size: cover;
+    font-family: 'VT323', monospace; /* VT323 для основного текста */
 }
 
 nav {
-    background-color: #003366; /* Темно-синий фон, аналогично index.html */
+    background-color: #000; /* Цвет фона меню */
     padding: 10px 0;
     text-align: center;
     width: 100%;
-    position: fixed;
     top: 0;
+    position: fixed;
     z-index: 10;
+    font-family: 'Press Start 2P', cursive; /* Вернуть к изначальному пиксельному шрифту для меню */
 }
 
 nav a {
-    color: #00BFFF; /* Светло-синий текст, аналогично index.html */
+    color: #fff; /* Цвет текста кнопок меню */
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 16px; /* Размер шрифта кнопок, можно адаптировать */
-    font-family: 'Press Start 2P', cursive; /* Пиксельный шрифт для кнопок */
+    margin: 0 20px;
+    font-size: 16px; /* или другой размер, который вы использовали */
 }
 
 .text-box {
-    font-family: 'VT323', monospace; /* Новый пиксельный шрифт */
-    line-height: 1.5; /* Увеличиваем межстрочное расстояние */
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 20px;
-    margin: 60px auto 20px; /* Адаптируйте в соответствии с вашим дизайном */
+    margin: 100px auto; /* Увеличенный отступ сверху для меню */
     max-width: 800px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: justify;
+    font-family: 'VT323', monospace; /* VT323 для текста в боксе */
 }
 
-/* Подтверждаем настройки для верхнего меню из общего файла styles.css */
-nav {
-    /* Стили для nav, идентичные тем, что указаны в файле styles.css */
+/* Стили для заголовков внутри .text-box, если нужно использовать VT323 */
+.text-box h1, .text-box h2, .text-box h3 {
+    font-family: 'VT323', monospace;
 }
 
-/* Анимация появления текстового блока */
-@keyframes appear {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.text-box {
-    animation: appear 1s ease-out forwards;
-}
-
-/* Добавляем медиа-запросы для адаптации размера шрифта и других элементов на маленьких экранах */
+/* Стили для адаптации под мобильные устройства */
 @media (max-width: 768px) {
     .text-box {
-        margin: 80px auto 20px; /* Уменьшаем верхний отступ на маленьких экранах */
-        padding: 15px;
-    }
-
-    nav a {
-        font-size: 14px; /* Уменьшаем размер шрифта кнопок для мобильных устройств */
+        margin: 80px 20px; /* Уменьшенные отступы для мобильных устройств */
     }
 }
-
