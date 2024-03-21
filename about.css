@@ -15,6 +15,21 @@ nav {
     width: 100%;
     top: 0;
     z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .menu-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav a {
@@ -22,6 +37,10 @@ nav a {
     text-decoration: none;
     margin: 0 20px;
     font-family: 'Press Start 2P', cursive; /* Подтверждаем использование пиксельного шрифта для меню */
+}
+
+nav a i {
+    margin: 0 10px;
 }
 
 .text-box {
