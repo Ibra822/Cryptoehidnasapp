@@ -101,27 +101,39 @@ nav a {
 @media (max-width: 768px) {
     .hero {
         padding: 10px;
-        justify-content: flex-start; /* Выравнивание по верхнему краю */
+        justify-content: center; /* Центрирование содержимого */
+        align-items: center; /* Дополнительное центрирование по горизонтали, если .hero использует flex */
+        display: flex;
+        flex-direction: column; /* Стекаем элементы вертикально */
+        height: 100vh; /* Устанавливаем минимальную высоту, чтобы занять всю видимую высоту экрана */
     }
 
     .timer-wrapper {
-        position: static; /* Отменяем абсолютное позиционирование */
-        margin-top: 0; /* Убираем верхний отступ */
+        position: static;
+        margin-top: 0;
     }
 
     .neon-text, .copy-address-btn {
-        font-size: 18px; /* Уменьшаем размер шрифта для маленьких экранов */
+        font-size: 18px; /* Размер шрифта адаптируется под размер экрана */
+        text-align: center; /* Центрирование текста */
     }
 }
 
 @media (max-width: 480px) {
-    /* Стили для очень маленьких экранов, например, для iPhone */
     .hero {
         padding: 5px;
-        justify-content: flex-start; /* Дополнительное выравнивание по верхнему краю */
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
     }
 
     .neon-text {
-        font-size: 14px; /* Еще меньше размер шрифта */
+        font-size: 16px; /* Незначительно больший размер шрифта для лучшей читаемости */
+    }
+
+    .copy-address-btn {
+        font-size: 14px; /* Уменьшаем размер шрифта для кнопки на очень маленьких экранах */
     }
 }
