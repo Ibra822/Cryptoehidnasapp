@@ -18,10 +18,10 @@ nav {
 }
 
 nav a {
-    color: #fff; /* Установите точный цвет текста, как на главной странице */
+    color: #00BFFF; /* Светло-синий текст */
     text-decoration: none;
-    margin: 0 20px;
-    font-size: 16px; /* Подстройте под ваш дизайн */
+    margin: 0 15px;
+    font-size: 16px;
 }
 
 .text-box {
