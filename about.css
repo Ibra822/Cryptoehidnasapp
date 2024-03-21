@@ -8,15 +8,13 @@ body, html {
 }
 
 nav {
-    background-color: #000; /* Установите точный цвет фона, как на главной странице */
-    padding: 10px 0;
+    background-color: #003366; /* Темный синий фон */
+    padding: 10px;
     text-align: center;
+    position: fixed;
     width: 100%;
     top: 0;
-    position: fixed;
     z-index: 10;
-    font-family: 'Press Start 2P', cursive;
-}
 
 nav a {
     color: #fff; /* Установите точный цвет текста, как на главной странице */
