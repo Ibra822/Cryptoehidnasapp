@@ -18,10 +18,10 @@ nav {
 }
 
 nav a {
-    color: #00BFFF; /* Светло-синий текст */
+    color: #00BFFF; /* Цвет текста ссылок */
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 16px;
+    margin: 0 20px;
+    font-family: 'Press Start 2P', cursive; /* Подтверждаем использование пиксельного шрифта для меню */
 }
 
 .text-box {
