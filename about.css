@@ -1,54 +1,39 @@
-/* Общие стили для навигации */
+/* Общие стили для навигационной панели */
 nav {
-    background-color: #003366; /* Темный синий фон */
-    padding: 10px 0;
+    background-color: #003366; /* Пример цвета фона */
+    padding: 10px;
     text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000; /* Убедитесь, что навигация всегда наверху */
+    z-index: 10;
 }
 
 nav a {
-    color: #00BFFF; /* Светло-синий текст */
+    color: #00BFFF; /* Пример светло-синего цвета текста */
     text-decoration: none;
     margin: 0 15px;
     font-size: 16px;
-    transition: color 0.3s ease;
+    font-weight: bold; /* Делаем текст жирным */
+    padding: 5px 10px; /* Добавляем немного отступов вокруг текста */
 }
 
-nav a:hover {
-    color: #FFFFFF; /* Белый цвет при наведении */
+/* Стили для кнопок */
+.button {
+    background-color: #007bff; /* Пример светло-синего цвета фона */
+    color: #ffffff; /* Цвет текста */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase; /* Текст в верхнем регистре */
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-/* Стили для текстового бокса страницы About */
-.text-box {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 80px auto 20px; /* Добавьте отступ сверху, чтобы текст не перекрывался навигацией */
-    max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: appear 1s ease-out forwards;
+.button:hover {
+    background-color: #0056b3; /* Темнее синий при наведении */
+    transform: scale(1.05); /* Небольшое увеличение при наведении */
 }
 
-@keyframes appear {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-h1, p {
-    font-family: 'Press Start 2P', cursive; /* Пиксельный шрифт для всего текста */
-}
-
-h1 {
-    text-align: center;
-    font-size: 24px; /* Адаптируйте размеры под ваш дизайн */
-}
-
-p {
-    font-size: 16px; /* Адаптируйте размеры под ваш дизайн */
-    margin: 15px 0;
-}
-
-/* Добавьте медиа-запросы для адаптивности при необходимости */
+/* Убедитесь, что вы применили класс .button к вашим кнопкам в HTML */
