@@ -1,6 +1,5 @@
 body, html {
     font-family: 'Press Start 2P', cursive;
-    height: 100%;
     margin: 0;
     background: url('background.png') no-repeat center center fixed; 
     background-size: cover;
@@ -101,12 +100,28 @@ nav a {
 
 @media (max-width: 768px) {
     .hero {
-        width: 95%;
-        margin-top: 20px;
+        padding: 10px;
+        justify-content: flex-start; /* Выравнивание по верхнему краю */
+    }
+
+    .timer-wrapper {
+        position: static; /* Отменяем абсолютное позиционирование */
+        margin-top: 0; /* Убираем верхний отступ */
+    }
+
+    .neon-text, .copy-address-btn {
+        font-size: 18px; /* Уменьшаем размер шрифта для маленьких экранов */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Стили для очень маленьких экранов, например, для iPhone */
+    .hero {
+        padding: 5px;
+        justify-content: flex-start; /* Дополнительное выравнивание по верхнему краю */
     }
 
     .neon-text {
-        font-size: 24px;
+        font-size: 14px; /* Еще меньше размер шрифта */
     }
 }
-"""
