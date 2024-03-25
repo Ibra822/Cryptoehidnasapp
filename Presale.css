@@ -24,28 +24,45 @@ nav a {
     font-family: 'Press Start 2P', cursive; /* Подтверждаем использование пиксельного шрифта для меню */
 
 .text-box {
-    margin: 20px;
-    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 100px auto; /* Увеличенный отступ сверху для меню */
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: justify;
+    font-family: 'Press Start 2P', cursive; /* Возвращаем к изначальному шрифту */
+    font-size: 16px; /* Размер шрифта по вашему выбору */
+    line-height: 1.5; /* Увеличенное расстояние между строками */
 }
 
-.text-box h1, .text-box h2 {
-    color: #333;
+@media (max-width: 768px) {
+    .text-box {
+        padding: 15px; /* Уменьшаем внутренние отступы */
+        margin: 50px 20px; /* Уменьшаем верхний отступ и добавляем боковые отступы для "дыхания" */
+        font-size: 14px; /* Уменьшаем размер шрифта для читаемости */
+    }
+
+    /* Если есть заголовки в вашем текстовом блоке, возможно, вам также захочется их уменьшить */
+    .text-box h1 {
+        font-size: 18px; /* Уменьшаем размер шрифта для заголовков */
+    }
+
+    .text-box p {
+        margin-bottom: 20px; /* Увеличиваем маржин для абзацев для лучшей читаемости */
+    }
 }
 
-.text-box p, .text-box li {
-    color: #666;
-}
+@media (max-width: 480px) {
+    .text-box {
+        padding: 10px;
+        margin: 40px 10px; /* Дополнительное уменьшение для очень маленьких экранов */
+        font-size: 12px; /* Делаем текст ещё меньше для очень маленьких экранов */
+    }
 
-.text-box ul {
-    list-style-type: none;
-    padding: 0;
-}
+    .text-box h1 {
+        font-size: 16px; /* Адаптируем заголовки для очень маленьких экранов */
+    }
 
-.text-box em {
-    font-style: normal;
+    /* Адаптация отступов и размеров других элементов, если это необходимо */
 }
-
-.text-box strong {
-    font-weight: bold;
-}
-
