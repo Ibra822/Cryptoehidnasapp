@@ -1,38 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-body {
-    font-family: 'VT323', monospace;
-    background-color: #f0f0f0;
-    color: #333;
+body, html {
     margin: 0;
     padding: 0;
+    background: url('background2.png') no-repeat center center fixed;
+    background-size: cover;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em 0;
+nav {
+    background-color: #003366; /* Темный синий фон */
+    padding: 10px;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
 }
 
 nav a {
-    color: #fff;
-    margin: 0 15px;
+    color: #00BFFF; /* Цвет текста ссылок */
     text-decoration: none;
-    font-size: 20px;
-}
-
-nav a:hover {
-    color: #f0f0f0;
-}
-
-.main {
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    margin: 0 20px;
+    font-family: 'Press Start 2P', cursive; /* Подтверждаем использование пиксельного шрифта для меню */
 
 .text-box {
     margin: 20px;
