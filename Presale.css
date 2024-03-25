@@ -22,6 +22,7 @@ nav a {
     text-decoration: none;
     margin: 0 20px;
     font-family: 'Press Start 2P', cursive; /* Подтверждаем использование пиксельного шрифта для меню */
+}
 
 .text-box {
     background: rgba(255, 255, 255, 0.8);
