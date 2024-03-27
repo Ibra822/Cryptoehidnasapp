@@ -6,51 +6,56 @@ body, html {
     overflow-x: hidden;
 }
 
-/* Обновляем стили nav для создания скрытого меню, которое будет выезжать */
+/* Стили для nav изменены для поддержки скрытого состояния и анимации */
 nav {
     background-color: #003366; /* Темный синий фон */
-    width: 0; /* Меню скрыто по умолчанию */
-    height: 100%; /* Высота до конца экрана */
+    height: 100%;
+    width: 0; /* Скрыть меню по умолчанию */
     position: fixed;
     z-index: 15;
     top: 0;
     left: 0;
     overflow-x: hidden;
-    transition: 0.5s; /* Плавное появление */
+    transition: 0.5s; /* Плавное открытие и закрытие */
     padding-top: 60px; /* Отступ сверху */
 }
 
-nav a {
-    color: #00BFFF; /* Светло-синий текст */
-    text-decoration: none;
-    font-size: 16px;
-    display: block; /* Делаем ссылки блочными для вертикального списка */
-    margin: 10px 0;
-    padding: 10px 15px;
-    text-align: left;
+/* Активное состояние меню */
+nav.active {
+    width: 15%; /* Ширина меню для десктопов */
 }
 
+@media (max-width: 768px) {
+    nav.active {
+        width: 100%; /* Ширина меню на весь экран для мобильных устройств */
+    }
+}
+
+.menu-icon, .menu-text {
+    color: #00BFFF;
+    cursor: pointer;
+    display: inline-block; /* Отображаем рядом */
+    font-size: 16px;
+    margin-right: 20px; /* Отступ справа для иконки */
+}
+
+/* Обеспечиваем видимость .menu-icon и .menu-text на всех устройствах */
 .header-title {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #003366; /* Сохраняем синюю полоску сверху */
+    justify-content: flex-start; /* Иконка меню и текст "Menu" слева */
+    background-color: #003366;
+    width: 100%;
     padding: 10px;
     position: fixed;
-    width: 100%;
     top: 0;
     z-index: 10;
 }
 
-.menu-icon {
-    cursor: pointer;
-    display: block;
-}
-
-.menu-text {
-    color: #00BFFF;
-    display: none; /* Скрываем текст "Menu" на десктопах */
-    font-size: 16px;
+@media (max-width: 768px) {
+    nav a {
+        display: block; /* Ссылки блочные, для вертикального списка */
+    }
 }
 
 .hero {
@@ -195,28 +200,5 @@ nav a {
 
     .copy-address-btn {
         font-size: 14px; /* Уменьшаем размер шрифта для кнопки на очень маленьких экранах */
-    }
-}
-/* Остальные стили без изменений */
-/* ... */
-/* Медиа-запрос для адаптации меню на мобильных устройствах */
-@media (max-width: 768px) {
-    .menu-text {
-        display: block; /* Показываем текст "Menu" на мобильных */
-    }
-
-    nav {
-        width: 80%; /* Ширина меню на мобильных */
-    }
-}
-
-/* Добавляем класс .open для nav, чтобы контролировать состояние меню */
-.nav.open {
-    width: 15%; /* Ширина открытого меню на десктопах */
-}
-
-@media (max-width: 768px) {
-    .nav.open {
-        width: 100%; /* На мобильных устройствах меню занимает всю ширину */
     }
 }
