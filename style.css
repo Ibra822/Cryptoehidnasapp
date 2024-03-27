@@ -6,45 +6,57 @@ body, html {
     overflow-x: hidden;
 }
 
-/* Стили для кнопки меню и полоски */
-.menu-icon {
-    cursor: pointer;
+nav {
+    background-color: #003366; /* Темный синий фон */
     padding: 10px;
-    background-color: #003366; /* Цвет полоски */
-    color: #FFF; /* Цвет иконки */
-    position: fixed; /* Фиксируем положение */
+    text-align: center;
+    position: fixed;
+    width: 100%;
     top: 0;
-    left: 0; /* Положение в левом верхнем углу */
-    z-index: 11; /* Выше, чем другие элементы */
+    z-index: 10;
     display: flex;
+    justify-content: space-between; /* Распределяем пространство между элементами */
     align-items: center;
 }
 
-.menu-text {
-    margin-left: 10px;
-    font-size: 16px;
+.menu-icon {
+    display: none; /* Скрытие иконки меню на десктопной версии */
 }
 
-nav {
-    background-color: #003366; /* Темный синий фон */
-    padding: 10px 0;
-    text-align: center;
-    position: fixed;
-    width: 0; /* Изначальная ширина */
-    height: 100%; /* Высота */
-    top: 0;
-    left: 0;
-    overflow-x: hidden; /* Скрываем содержимое при закрытом меню */
-    transition: 0.5s; /* Плавное открытие и закрытие */
-    z-index: 10;
-}
-
-nav a {
+nav a, .menu-text {
     color: #00BFFF; /* Светло-синий текст */
     text-decoration: none;
-    margin: 10px 15px;
+    margin: 0 15px;
     font-size: 16px;
-    display: block; /* Чтобы ссылки занимали свои строки */
+}
+
+.header-title {
+    font-size: 20px; /* Увеличиваем размер для надписи Menu */
+    color: #FFF; /* Белый цвет текста для лучшей видимости */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Показываем иконку меню на мобильных устройствах */
+        cursor: pointer;
+    }
+
+    .header-title {
+        width: 100%; /* Ширина на всю линию */
+        justify-content: space-between; /* Равномерное распределение контента */
+    }
+
+    nav a {
+        display: none; /* Скрываем ссылки в навигации */
+    }
+
+    .menu-text {
+        display: block; /* Показываем текст Menu */
+        font-size: 16px; /* Размер текста */
+    }
 }
 .hero {
     display: flex;
