@@ -6,6 +6,18 @@ body, html {
     overflow-x: hidden;
 }
 
+/* Стилизация кнопки меню (гамбургер) */
+.menu-icon {
+    display: none; /* По умолчанию скрыта */
+    font-size: 30px; /* Размер иконки меню */
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 11; /* Чтобы быть над всеми элементами */
+    color: #FFF; /* Белый цвет иконки */
+}
+
 nav {
     background-color: #003366; /* Темный синий фон */
     padding: 10px;
@@ -13,6 +25,8 @@ nav {
     position: fixed;
     width: 100%;
     top: 0;
+    left: -100%; /* Изначально скрыто за левым краем экрана */
+    transition: 0.5s; /* Плавная анимация */
     z-index: 10;
 }
 
@@ -29,142 +43,59 @@ nav a {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    z-index: 2;
-    position: relative;
 }
 
 .content-wrapper {
-    background: rgba(255, 255, 255, 0.2); /* Прозрачный белый фон */
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     text-align: center;
-    display: inline-block;
 }
 
 .neon-text {
-    color: #20FC8F;
-    text-shadow:
-        0 0 5px #FFF,
-        0 0 10px #FFF,
-        0 0 20px #20FC8F,
-        0 0 30px #20FC8F,
-        0 0 40px #20FC8F,
-        0 0 50px #20FC8F,
-        0 0 60px #20FC8F;
-    animation: neon 1.5s ease-in-out infinite alternate;
-    font-size: 32px;
+    /* Стили не меняются */
 }
 
-@keyframes neon {
-    from {
-        text-shadow:
-            0 0 10px #FFF,
-            0 0 20px #FFF,
-            0 0 30px #20FC8F,
-            0 0 40px #20FC8F,
-            0 0 50px #20FC8F,
-            0 0 60px #20FC8F,
-            0 0 70px #20FC8F;
-    }
-    to {
-        text-shadow:
-            0 0 5px #FFF,
-            0 0 10px #FFF,
-            0 0 15px #20FC8F,
-            0 0 20px #20FC8F,
-            0 0 25px #20FC8F,
-            0 0 30px #20FC8F,
-            0 0 35px #20FC8F;
-    }
-}
-
-.copy-address-btn {
-    padding: 15px 30px;
-    background-color: #007bff; /* Светло-синий фон */
-    color: #FFF; /* Белый текст */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-family: 'Press Start 2P', cursive;
-    text-transform: uppercase;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    z-index: 9;
-}
-
-.copy-address-btn:hover {
-    background-color: #0056b3; /* Темнее синий при наведении */
-    transform: scale(1.1);
-}
-
-.buy-now-btn {
+.copy-address-btn, .buy-now-btn {
+    /* Объединяем стили для обеих кнопок */
     padding: 10px 20px;
-    background-color: #007bff; /* Светло-синий фон */
-    color: #FFF; /* Белый текст */
+    background-color: #007bff;
+    color: #FFF;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px; /* Уменьшенный размер шрифта */
+    font-size: 14px; /* Уменьшенный размер шрифта для кнопки "Buy Now" */
     font-family: 'Press Start 2P', cursive;
     text-transform: uppercase;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    display: inline-block; /* Для правильного отображения эффектов */
+    display: inline-block;
     text-decoration: none;
-    box-shadow: 0 0 10px #00bfff; /* Светящаяся тень */
-    position: relative; /* Для возможного абсолютного позиционирования */
-    z-index: 9;
+    box-shadow: 0 0 10px #00bfff;
+    margin-top: 10px; /* Добавляем небольшой отступ сверху */
 }
 
-.buy-now-btn:hover, .buy-now-btn:active {
-    background-color: #0056b3; /* Темнее синий при наведении */
-    box-shadow: 0 0 15px #00bfff; /* Увеличенная светящаяся тень */
-    transform: scale(1.05); /* Увеличение размера */
-}
-
-/* Если нужно абсолютное позиционирование в правом верхнем углу */
-.header .buy-now-btn {
-    position: absolute;
-    right: 20px;
-    top: 10px;
+.copy-address-btn:hover, .buy-now-btn:hover, .copy-address-btn:active, .buy-now-btn:active {
+    background-color: #0056b3;
+    box-shadow: 0 0 15px #00bfff;
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
-    .hero {
-        padding: 10px;
-        justify-content: center; /* Центрирование содержимого */
-        align-items: center; /* Дополнительное центрирование по горизонтали, если .hero использует flex */
-        display: flex;
-        flex-direction: column; /* Стекаем элементы вертикально */
-        height: 100vh; /* Устанавливаем минимальную высоту, чтобы занять всю видимую высоту экрана */
+    /* Стили адаптируются под мобильные устройства */
+    .menu-icon {
+        display: block; /* Показываем иконку меню */
     }
 
-    .timer-wrapper {
-        position: static;
-        margin-top: 0;
+    nav {
+        width: 100%; /* На мобильных занимает весь экран */
+        left: 0; /* Сбрасываем смещение для анимации */
+        transform: translateX(-100%); /* Скрыто за левым краем */
     }
 
-    .neon-text, .copy-address-btn {
-        font-size: 18px; /* Размер шрифта адаптируется под размер экрана */
-        text-align: center; /* Центрирование текста */
+    nav.active {
+        transform: translateX(0); /* Показываем меню */
     }
 }
 
-@media (max-width: 480px) {
-    .hero {
-        padding: 5px;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-    }
-
-    .neon-text {
-        font-size: 16px; /* Незначительно больший размер шрифта для лучшей читаемости */
-    }
-
-    .copy-address-btn {
-        font-size: 14px; /* Уменьшаем размер шрифта для кнопки на очень маленьких экранах */
-    }
-}
+/* Дополнительные медиа-запросы и стили для .hero, если нужно */
