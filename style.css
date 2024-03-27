@@ -98,6 +98,37 @@ nav a {
     transform: scale(1.1);
 }
 
+.buy-now-btn {
+    padding: 15px 30px;
+    background-color: #004d66; /* Темно-бирюзовый */
+    color: #FFF; /* Белый текст */
+    border: 2px solid #00bfff; /* Светло-голубая граница */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block; /* Для правильного отображения эффектов */
+    box-shadow: 0 0 10px #00bfff; /* Светящаяся тень */
+    position: relative; /* Для возможного абсолютного позиционирования */
+    z-index: 9;
+}
+
+.buy-now-btn:hover {
+    background-color: #007bff; /* Ярко-синий при наведении */
+    box-shadow: 0 0 15px #00bfff; /* Увеличенная светящаяся тень */
+    transform: scale(1.05); /* Увеличение размера */
+}
+
+/* Если нужно абсолютное позиционирование в правом верхнем углу */
+.header .buy-now-btn {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
 @media (max-width: 768px) {
     .hero {
         padding: 10px;
