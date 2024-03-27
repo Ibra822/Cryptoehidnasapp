@@ -1,75 +1,56 @@
 body, html {
     font-family: 'Press Start 2P', cursive;
     margin: 0;
-    background: url('background.png') no-repeat center center fixed; 
+    background: url('background.png') no-repeat center center fixed;
     background-size: cover;
     overflow-x: hidden;
 }
 
-/* Оставляем nav без изменений */
+/* Обновляем стили nav для создания скрытого меню, которое будет выезжать */
 nav {
-    background-color: #003366;
+    background-color: #003366; /* Темный синий фон */
+    width: 0; /* Меню скрыто по умолчанию */
+    height: 100%; /* Высота до конца экрана */
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s; /* Плавное появление */
+    padding-top: 60px; /* Отступ сверху */
+}
+
+nav a {
+    color: #00BFFF; /* Светло-синий текст */
+    text-decoration: none;
+    font-size: 16px;
+    display: block; /* Делаем ссылки блочными для вертикального списка */
+    margin: 10px 0;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.header-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366; /* Сохраняем синюю полоску сверху */
     padding: 10px;
-    text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-/* Стилизация иконки меню и надписи "Menu" */
-.menu-icon, .menu-text {
-    color: #00BFFF; /* Цвет иконки и текста */
-    display: none; /* Скрыто по умолчанию, будет отображаться только на мобильных */
-    cursor: pointer; /* Курсор в виде указателя */
-    font-size: 16px; /* Размер шрифта */
+.menu-icon {
+    cursor: pointer;
+    display: block;
 }
 
-/* Стили для nav a и .menu-text без изменений */
-nav a, .menu-text {
+.menu-text {
     color: #00BFFF;
-    text-decoration: none;
-    margin: 0 15px;
+    display: none; /* Скрываем текст "Menu" на десктопах */
     font-size: 16px;
-}
-
-/* Стили для .header-title без изменений */
-.header-title {
-    font-size: 20px;
-    color: #FFF;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-/* Медиа-запрос для адаптации под мобильные устройства */
-@media (max-width: 768px) {
-    .menu-icon, .menu-text {
-        display: block; /* Показываем кнопку и текст "Menu" */
-    }
-
-    /* Скрываем ссылки в меню, чтобы показать их только при активации меню */
-    #navbar {
-        position: fixed;
-        left: -100%; /* Скрыто за пределами экрана */
-        height: 100%;
-        width: 80%; /* Ширина меню на мобильных */
-        transition: left 0.3s ease; /* Анимация выкатывания меню */
-        padding-top: 60px; /* Отступ сверху для ссылок */
-    }
-
-    /* Показываем меню при изменении стиля left на 0 */
-    #navbar.active {
-        left: 0;
-    }
-
-    nav a {
-        display: block; /* Ссылки становятся блочными элементами */
-        margin: 10px 0; /* Отступы между ссылками */
-    }
 }
 
 .hero {
@@ -218,15 +199,24 @@ nav a, .menu-text {
 }
 /* Остальные стили без изменений */
 /* ... */
-
-/* Добавляем медиа запросы для адаптации кнопки меню */
+/* Медиа-запрос для адаптации меню на мобильных устройствах */
 @media (max-width: 768px) {
-    .menu-icon, .menu-text {
-        display: block; /* Показываем кнопку и текст на мобильных */
+    .menu-text {
+        display: block; /* Показываем текст "Menu" на мобильных */
     }
 
     nav {
-        width: 100%; /* Меню занимает всю ширину на мобильных */
+        width: 80%; /* Ширина меню на мобильных */
     }
 }
 
+/* Добавляем класс .open для nav, чтобы контролировать состояние меню */
+.nav.open {
+    width: 15%; /* Ширина открытого меню на десктопах */
+}
+
+@media (max-width: 768px) {
+    .nav.open {
+        width: 100%; /* На мобильных устройствах меню занимает всю ширину */
+    }
+}
