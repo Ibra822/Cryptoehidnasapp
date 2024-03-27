@@ -8,8 +8,8 @@ document.getElementById('copyButton').addEventListener('click', function() {
 
 // Функция для переключения меню
 function toggleMenu() {
-    var navbar = document.querySelector('nav');
-    if (navbar.style.width === "100%" || navbar.style.width === "10%") {
+    var navbar = document.getElementById('navbar');
+    if (navbar.style.width === "100%" || navbar.style.width === "15%") {
         navbar.style.width = "0"; // Скрыть меню
     } else {
         // Открыть меню
@@ -17,7 +17,7 @@ function toggleMenu() {
         if (window.innerWidth <= 768) {
             navbar.style.width = "100%"; // Полная ширина для мобильных устройств
         } else {
-            navbar.style.width = "10%"; // Частичная ширина для десктопов
+            navbar.style.width = "15%"; // 15% ширина для десктопов
         }
     }
 }
@@ -29,4 +29,5 @@ document.addEventListener('DOMContentLoaded', function() {
         menuIcon.addEventListener('click', toggleMenu);
     }
 });
+
 
