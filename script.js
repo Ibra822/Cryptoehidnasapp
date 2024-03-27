@@ -23,4 +23,10 @@ function toggleMenu() {
 }
 
 // Добавляем слушатель для иконки меню
-document.querySelector('.menu-icon').addEventListener('click', toggleMenu);
+document.addEventListener('DOMContentLoaded', function() {
+    var menuIcon = document.querySelector('.menu-icon');
+    if (menuIcon) {
+        menuIcon.addEventListener('click', toggleMenu);
+    }
+});
+
