@@ -6,96 +6,201 @@ body, html {
     overflow-x: hidden;
 }
 
-/* Стилизация кнопки меню (гамбургер) */
+/* Стили для кнопки меню и полоски */
 .menu-icon {
-    display: none; /* По умолчанию скрыта */
-    font-size: 30px; /* Размер иконки меню */
     cursor: pointer;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 11; /* Чтобы быть над всеми элементами */
-    color: #FFF; /* Белый цвет иконки */
+    padding: 10px;
+    background-color: #003366; /* Цвет полоски */
+    color: #FFF; /* Цвет иконки */
+    position: fixed; /* Фиксируем положение */
+    top: 0;
+    left: 0; /* Положение в левом верхнем углу */
+    z-index: 11; /* Выше, чем другие элементы */
+    display: flex;
+    align-items: center;
+}
+
+.menu-text {
+    margin-left: 10px;
+    font-size: 16px;
 }
 
 nav {
     background-color: #003366; /* Темный синий фон */
-    padding: 10px;
+    padding: 10px 0;
     text-align: center;
     position: fixed;
-    width: 100%;
+    width: 0; /* Изначальная ширина */
+    height: 100%; /* Высота */
     top: 0;
-    left: -100%; /* Изначально скрыто за левым краем экрана */
-    transition: 0.5s; /* Плавная анимация */
+    left: 0;
+    overflow-x: hidden; /* Скрываем содержимое при закрытом меню */
+    transition: 0.5s; /* Плавное открытие и закрытие */
     z-index: 10;
 }
 
 nav a {
     color: #00BFFF; /* Светло-синий текст */
     text-decoration: none;
-    margin: 0 15px;
+    margin: 10px 15px;
     font-size: 16px;
+    display: block; /* Чтобы ссылки занимали свои строки */
 }
-
 .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    z-index: 2;
+    position: relative;
 }
 
 .content-wrapper {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2); /* Прозрачный белый фон */
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     text-align: center;
+    display: inline-block;
 }
 
 .neon-text {
-    /* Стили не меняются */
+    color: #20FC8F;
+    text-shadow:
+        0 0 5px #FFF,
+        0 0 10px #FFF,
+        0 0 20px #20FC8F,
+        0 0 30px #20FC8F,
+        0 0 40px #20FC8F,
+        0 0 50px #20FC8F,
+        0 0 60px #20FC8F;
+    animation: neon 1.5s ease-in-out infinite alternate;
+    font-size: 32px;
 }
 
-.copy-address-btn, .buy-now-btn {
-    /* Объединяем стили для обеих кнопок */
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #FFF;
+@keyframes neon {
+    from {
+        text-shadow:
+            0 0 10px #FFF,
+            0 0 20px #FFF,
+            0 0 30px #20FC8F,
+            0 0 40px #20FC8F,
+            0 0 50px #20FC8F,
+            0 0 60px #20FC8F,
+            0 0 70px #20FC8F;
+    }
+    to {
+        text-shadow:
+            0 0 5px #FFF,
+            0 0 10px #FFF,
+            0 0 15px #20FC8F,
+            0 0 20px #20FC8F,
+            0 0 25px #20FC8F,
+            0 0 30px #20FC8F,
+            0 0 35px #20FC8F;
+    }
+}
+
+.copy-address-btn {
+    padding: 15px 30px;
+    background-color: #007bff; /* Светло-синий фон */
+    color: #FFF; /* Белый текст */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px; /* Уменьшенный размер шрифта для кнопки "Buy Now" */
+    font-size: 16px;
     font-family: 'Press Start 2P', cursive;
     text-transform: uppercase;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    display: inline-block;
-    text-decoration: none;
-    box-shadow: 0 0 10px #00bfff;
-    margin-top: 10px; /* Добавляем небольшой отступ сверху */
+    z-index: 9;
 }
 
-.copy-address-btn:hover, .buy-now-btn:hover, .copy-address-btn:active, .buy-now-btn:active {
-    background-color: #0056b3;
-    box-shadow: 0 0 15px #00bfff;
-    transform: scale(1.05);
+.copy-address-btn:hover {
+    background-color: #0056b3; /* Темнее синий при наведении */
+    transform: scale(1.1);
+}
+
+.buy-now-btn {
+    padding: 10px 20px;
+    background-color: #007bff; /* Светло-синий фон */
+    color: #FFF; /* Белый текст */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Уменьшенный размер шрифта */
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: inline-block; /* Для правильного отображения эффектов */
+    text-decoration: none;
+    box-shadow: 0 0 10px #00bfff; /* Светящаяся тень */
+    position: relative; /* Для возможного абсолютного позиционирования */
+    z-index: 9;
+}
+
+.buy-now-btn:hover, .buy-now-btn:active {
+    background-color: #0056b3; /* Темнее синий при наведении */
+    box-shadow: 0 0 15px #00bfff; /* Увеличенная светящаяся тень */
+    transform: scale(1.05); /* Увеличение размера */
+}
+
+/* Если нужно абсолютное позиционирование в правом верхнем углу */
+.header .buy-now-btn {
+    position: absolute;
+    right: 20px;
+    top: 10px;
 }
 
 @media (max-width: 768px) {
-    /* Стили адаптируются под мобильные устройства */
-    .menu-icon {
-        display: block; /* Показываем иконку меню */
+    .hero {
+        padding: 10px;
+        justify-content: center; /* Центрирование содержимого */
+        align-items: center; /* Дополнительное центрирование по горизонтали, если .hero использует flex */
+        display: flex;
+        flex-direction: column; /* Стекаем элементы вертикально */
+        height: 100vh; /* Устанавливаем минимальную высоту, чтобы занять всю видимую высоту экрана */
+    }
+
+    .timer-wrapper {
+        position: static;
+        margin-top: 0;
+    }
+
+    .neon-text, .copy-address-btn {
+        font-size: 18px; /* Размер шрифта адаптируется под размер экрана */
+        text-align: center; /* Центрирование текста */
+    }
+}
+@media (max-width: 480px) {
+    .hero {
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .neon-text {
+        font-size: 16px; /* Незначительно больший размер шрифта для лучшей читаемости */
+    }
+
+    .copy-address-btn {
+        font-size: 14px; /* Уменьшаем размер шрифта для кнопки на очень маленьких экранах */
+    }
+}
+/* Остальные стили без изменений */
+/* ... */
+
+/* Добавляем медиа запросы для адаптации кнопки меню */
+@media (max-width: 768px) {
+    .menu-icon, .menu-text {
+        display: block; /* Показываем кнопку и текст на мобильных */
     }
 
     nav {
-        width: 100%; /* На мобильных занимает весь экран */
-        left: 0; /* Сбрасываем смещение для анимации */
-        transform: translateX(-100%); /* Скрыто за левым краем */
-    }
-
-    nav.active {
-        transform: translateX(0); /* Показываем меню */
+        width: 100%; /* Меню занимает всю ширину на мобильных */
     }
 }
 
-/* Дополнительные медиа-запросы и стили для .hero, если нужно */
