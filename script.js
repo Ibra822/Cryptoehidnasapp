@@ -8,25 +8,32 @@ document.getElementById('copyButton').addEventListener('click', function() {
 
 // Функция для переключения меню
 function toggleMenu() {
-    var navbar = document.getElementById('navbar');
-    if (navbar.style.width === "100%" || navbar.style.width === "15%") {
-        navbar.style.width = "0"; // Скрыть меню
+    var navbar = document.getElementById("navbar");
+    // Проверяем текущее состояние меню
+    if (navbar.style.transform === "translateX(0%)" || navbar.style.transform === "") {
+        // Скрываем меню
+        navbar.style.transform = "translateX(-100%)";
     } else {
-        // Открыть меню
-        // Установить ширину в зависимости от размера экрана
-        if (window.innerWidth <= 768) {
-            navbar.style.width = "100%"; // Полная ширина для мобильных устройств
-        } else {
-            navbar.style.width = "15%"; // 15% ширина для десктопов
-        }
+        // Отображаем меню
+        navbar.style.transform = "translateX(0%)";
     }
 }
 
-// Добавляем слушатель для иконки меню
+// Инициализация слушателя событий
 document.addEventListener('DOMContentLoaded', function() {
     var menuIcon = document.querySelector('.menu-icon');
     if (menuIcon) {
         menuIcon.addEventListener('click', toggleMenu);
+    }
+
+    // Устанавливаем изначальное положение меню вне видимой области экрана
+    var navbar = document.getElementById("navbar");
+    if (window.innerWidth > 768) {
+        // Для десктопных версий отображаем меню, но без выезжающего эффекта
+        navbar.style.transform = "translateX(0%)";
+    } else {
+        // Для мобильных версий изначально скрываем меню
+        navbar.style.transform = "translateX(-100%)";
     }
 });
 
