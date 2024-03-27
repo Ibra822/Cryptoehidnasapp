@@ -9,14 +9,8 @@ document.getElementById('copyButton').addEventListener('click', function() {
 // Функция для переключения меню
 function toggleMenu() {
     var navbar = document.getElementById("navbar");
-    // Проверяем текущее состояние меню
-    if (navbar.style.transform === "translateX(0%)" || navbar.style.transform === "") {
-        // Скрываем меню
-        navbar.style.transform = "translateX(-100%)";
-    } else {
-        // Отображаем меню
-        navbar.style.transform = "translateX(0%)";
-    }
+    // Переключаем класс 'active', который контролирует отображение меню
+    navbar.classList.toggle('active');
 }
 
 // Инициализация слушателя событий
@@ -25,16 +19,4 @@ document.addEventListener('DOMContentLoaded', function() {
     if (menuIcon) {
         menuIcon.addEventListener('click', toggleMenu);
     }
-
-    // Устанавливаем изначальное положение меню вне видимой области экрана
-    var navbar = document.getElementById("navbar");
-    if (window.innerWidth > 768) {
-        // Для десктопных версий отображаем меню, но без выезжающего эффекта
-        navbar.style.transform = "translateX(0%)";
-    } else {
-        // Для мобильных версий изначально скрываем меню
-        navbar.style.transform = "translateX(-100%)";
-    }
 });
-
-
