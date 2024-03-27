@@ -6,8 +6,9 @@ body, html {
     overflow-x: hidden;
 }
 
+/* Оставляем nav без изменений */
 nav {
-    background-color: #003366; /* Темный синий фон */
+    background-color: #003366;
     padding: 10px;
     text-align: center;
     position: fixed;
@@ -15,49 +16,62 @@ nav {
     top: 0;
     z-index: 10;
     display: flex;
-    justify-content: space-between; /* Распределяем пространство между элементами */
+    justify-content: space-between;
     align-items: center;
 }
 
-.menu-icon {
-    display: none; /* Скрытие иконки меню на десктопной версии */
+/* Стилизация иконки меню и надписи "Menu" */
+.menu-icon, .menu-text {
+    color: #00BFFF; /* Цвет иконки и текста */
+    display: none; /* Скрыто по умолчанию, будет отображаться только на мобильных */
+    cursor: pointer; /* Курсор в виде указателя */
+    font-size: 16px; /* Размер шрифта */
 }
 
+/* Стили для nav a и .menu-text без изменений */
 nav a, .menu-text {
-    color: #00BFFF; /* Светло-синий текст */
+    color: #00BFFF;
     text-decoration: none;
     margin: 0 15px;
     font-size: 16px;
 }
 
+/* Стили для .header-title без изменений */
 .header-title {
-    font-size: 20px; /* Увеличиваем размер для надписи Menu */
-    color: #FFF; /* Белый цвет текста для лучшей видимости */
+    font-size: 20px;
+    color: #FFF;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
+/* Медиа-запрос для адаптации под мобильные устройства */
 @media (max-width: 768px) {
-    .menu-icon {
-        display: block; /* Показываем иконку меню на мобильных устройствах */
-        cursor: pointer;
+    .menu-icon, .menu-text {
+        display: block; /* Показываем кнопку и текст "Menu" */
     }
 
-    .header-title {
-        width: 100%; /* Ширина на всю линию */
-        justify-content: space-between; /* Равномерное распределение контента */
+    /* Скрываем ссылки в меню, чтобы показать их только при активации меню */
+    #navbar {
+        position: fixed;
+        left: -100%; /* Скрыто за пределами экрана */
+        height: 100%;
+        width: 80%; /* Ширина меню на мобильных */
+        transition: left 0.3s ease; /* Анимация выкатывания меню */
+        padding-top: 60px; /* Отступ сверху для ссылок */
+    }
+
+    /* Показываем меню при изменении стиля left на 0 */
+    #navbar.active {
+        left: 0;
     }
 
     nav a {
-        display: none; /* Скрываем ссылки в навигации */
-    }
-
-    .menu-text {
-        display: block; /* Показываем текст Menu */
-        font-size: 16px; /* Размер текста */
+        display: block; /* Ссылки становятся блочными элементами */
+        margin: 10px 0; /* Отступы между ссылками */
     }
 }
+
 .hero {
     display: flex;
     flex-direction: column;
