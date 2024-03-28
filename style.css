@@ -88,7 +88,7 @@ body, html {
 }
 
 /* Стиль для каждой иконки */
-.social-icon {
+.social-icon,.social-icon:visited,.social-icon:active {
     color: #00BFFF; /* Цвет иконок, соответствующий цвету Menu и гамбургера */
     font-size: 30px; /* Размер иконок, соответствующий размеру гамбургера */
     margin-left: 20px; /* Отступ между иконками */
