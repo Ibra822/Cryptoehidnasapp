@@ -9,13 +9,13 @@ document.getElementById('copyButton').addEventListener('click', function() {
 // Функция для переключения меню
 function toggleMenu() {
     var navbar = document.getElementById("navbar");
-    navbar.classList.toggle("active");
+    if (navbar.style.left === "-100%") {
+        navbar.style.left = "0"; // Показать меню
+    } else {
+        navbar.style.left = "-100%"; // Скрыть меню
+    }
 }
 
-// Инициализация слушателя событий
 document.addEventListener('DOMContentLoaded', function() {
-    var menuIcon = document.querySelector('.menu-icon');
-    if (menuIcon) {
-        menuIcon.addEventListener('click', toggleMenu);
-    }
+    document.querySelector('.menu-icon').addEventListener('click', toggleMenu);
 });
