@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Заголовок и подключение стилей -->
-</head>
-<body class="tokenomics-background">
-    <!-- Шапка и навигация -->
-    <main>
-        <div class="text-box">
-            <!-- Информация о токеномике -->
-        </div>
-    </main>
-    <!-- Подвал сайта -->
-</body>
-</html>
+function toggleMenu() {
+    var navbar = document.getElementById("navbar");
+    navbar.classList.toggle("active");
+}
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Добавляем слушатель событий для иконки гамбургера
+    document.querySelector('.menu-icon').addEventListener('click', toggleMenu);
+});
