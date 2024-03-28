@@ -142,7 +142,7 @@ body, html {
 }
 
 .buy-now-btn {
-    padding: 10px 15px; /* Немного уменьшаем горизонтальный паддинг */
+    padding: 15px 15px; /* Немного уменьшаем горизонтальный паддинг */
     background-color: #007bff; /* Светло-синий фон */
     color: #FFF; /* Белый текст */
     border: none;
