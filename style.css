@@ -1,41 +1,46 @@
 body, html {
     font-family: 'Press Start 2P', cursive;
     margin: 0;
-    background: url('background.png') no-repeat center center fixed;
+    background: url('background.png') no-repeat center center fixed; 
     background-size: cover;
     overflow-x: hidden;
 }
 
-/* Создаем панель для иконки меню и текста */
-.menu-panel {
-    background-color: #003366; /* Темный синий фон, аналогично меню */
+.menu-icon {
+    cursor: pointer;
+    color: #00BFFF; /* Светло-синий текст */
+    font-size: 20px; /* Увеличиваем размер для иконки меню */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 20;
+}
+
+/* Фон за иконкой меню и текстом "Menu", тянется на всю ширину экрана */
+.menu-background {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Панель тянется на всю ширину */
-    z-index: 10; /* Убедитесь, что панель находится под меню */
-    padding: 10px 0; /* Небольшой отступ сверху и снизу */
-}
-
-.menu-icon, .menu-text {
-    cursor: pointer;
-    color: #00BFFF; /* Светло-синий текст */
-    font-size: 20px; /* Размер для надписи Menu */
-    z-index: 20; /* Убедитесь, что иконка и текст выше фона */
-    padding: 10px; /* Дополнительный отступ для лучшей видимости */
+    width: 100%;
+    height: 60px; /* Высота фона, достаточная для размещения иконки меню и текста */
+    background-color: #003366; /* Темный синий фон, такой же как в меню */
+    z-index: 10; /* Чтобы фон был под иконкой меню и текстом, но выше основного содержимого */
+    display: flex; /* Для центрирования элементов внутри */
+    align-items: center;
+    padding-left: 10px; /* Отступ слева для иконки и текста */
 }
 
 #navbar {
     height: 100%;
-    width: 0; /* Скрыто по умолчанию */
+    width: 0; /* Изначально скрыто */
     position: fixed;
     top: 0;
     left: 0;
     background-color: #003366; /* Темный синий фон */
     overflow-x: hidden;
     transition: 0.5s; /* Плавное появление и скрытие */
-    padding-top: 60px; /* Отступ сверху для содержимого меню */
-    z-index: 15; /* Убедитесь, что меню выше панели */
+    padding-top: 60px; /* Отступ для содержимого меню */
+    z-index: 15;
 }
 
 #navbar a {
@@ -47,19 +52,19 @@ body, html {
     transition: 0.3s;
 }
 
-#navbar.active {
-    width: 250px; /* Ширина активного меню */
+#navbar.active + .menu-background {
+    display: none; /* Скрываем фон за иконкой меню и текстом "Menu", когда меню активно */
 }
 
 /* Адаптация под разные размеры экранов */
 @media screen and (min-width: 768px) {
-    #navbar.active { /* Для десктопных версий */
+    #navbar { /* Для десктопных версий */
         width: 250px; /* Фиксированная ширина меню */
     }
 }
 
 @media screen and (max-width: 767px) {
-    #navbar.active { /* Для мобильных версий */
+    #navbar { /* Для мобильных версий */
         width: 100%; /* Меню на весь экран */
     }
 }
