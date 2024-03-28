@@ -142,7 +142,7 @@ body, html {
 }
 
 .buy-now-btn {
-    padding: 10px 10px; /* Уменьшенные горизонтальные отступы */
+    padding: 10px 20px; /* Небольшие отступы по бокам от текста */
     background-color: #007bff; /* Светло-синий фон */
     color: #FFF; /* Белый текст */
     border: none;
@@ -152,15 +152,12 @@ body, html {
     font-family: 'Press Start 2P', cursive;
     text-transform: uppercase;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    display: inline-block;
+    display: inline-block; /* Для правильного отображения эффектов */
     text-decoration: none;
     box-shadow: 0 0 10px #00bfff; /* Светящаяся тень */
-    position: absolute; /* Позиционирование относительно родительского элемента */
-    right: 20px; /* Правый отступ */
-    top: 10px; /* Верхний отступ */
+    position: relative; /* Для возможного абсолютного позиционирования */
     z-index: 9;
-    margin: 0 15px; /* Гармоничные отступы по бокам */
-    width: auto; /* Автоматическая ширина для адаптации содержимого */
+    margin-right: 20px; /* Добавим отступ справа, если кнопка находится в правой части экрана */
 }
 
 .buy-now-btn:hover, .buy-now-btn:active {
