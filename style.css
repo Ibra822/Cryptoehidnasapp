@@ -5,25 +5,39 @@ body, html {
     background-size: cover;
     overflow-x: hidden;
 }
+
 /* Создаем визуальную полосу для иконки меню и надписи */
 .menu-bar {
-    background-color: #003366; /* Цвет фона полосы, такой же как у меню */
+    background-color: #003366; /* Цвет фона полосы такой же, как у меню */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%; /* Полоса растягивается на всю ширину экрана */
-    height: 60px; /* Увеличиваем высоту полосы */
+    padding: 10px 0; /* Паддинг сверху и снизу для полосы */
     z-index: 19; /* Убедитесь, что полоса находится под меню и над другими элементами */
 }
 
 .menu-icon, .menu-text {
     cursor: pointer;
     color: #00BFFF; /* Светло-синий текст */
-    font-size: 20px; /* Размер надписи Menu */
+    font-size: 20px; /* Увеличиваем размер для надписи Menu */
     position: fixed;
-    top: 15px; /* Центрируем по высоте относительно новой высоты .menu-bar */
-    left: 20px;
+    top: 10px;
+    left: 10px;
     z-index: 20; /* Убедитесь, что иконка и текст находятся над фоновой полосой */
+}
+
+#navbar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #003366; /* Темный синий фон */
+    overflow-x: hidden;
+    transition: 0.5s; /* Плавное появление и скрытие */
+    padding-top: 60px;
+    z-index: 15; /* Убедитесь, что меню выше фоновой полосы, но ниже иконки и текста */
 }
 
 #navbar a {
