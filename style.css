@@ -76,6 +76,30 @@ body, html {
     }
 }
 
+/* Icon container to hold both icons */
+.icon-container {
+    position: fixed;
+    top: 0;
+    right: 10px; /* Adjust as needed for proper alignment */
+    z-index: 20; /* Ensures icons stay on top */
+    display: flex;
+    align-items: center; /* Centers icons vertically within the container */
+    height: 100%; /* Match the height of the menu bar for vertical centering */
+}
+
+/* Individual icon styling */
+.icon-container a {
+    color: #00BFFF; /* Light blue text color */
+    font-size: 20px; /* Icon size */
+    margin-left: 8px; /* Space between icons */
+    text-decoration: none; /* Removes underline from links */
+}
+
+/* Additional hover effect for icons */
+.icon-container a:hover {
+    color: #ffffff; /* Change color on hover */
+}
+
 .hero {
     display: flex;
     flex-direction: column;
