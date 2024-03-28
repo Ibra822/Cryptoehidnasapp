@@ -5,34 +5,25 @@ body, html {
     background-size: cover;
     overflow-x: hidden;
 }
-
 /* Создаем визуальную полосу для иконки меню и надписи */
-nav {
-    background-color: #003366; /* Темный синий фон */
-    padding: 10px 0; /* Вертикальный паддинг для центрирования содержимого */
+.menu-bar {
+    background-color: #003366; /* Цвет фона полосы, такой же как у меню */
     position: fixed;
-    width: 100%;
     top: 0;
     left: 0;
-    z-index: 10;
-    display: flex; /* Применяем flexbox для горизонтального выравнивания элементов */
-    align-items: center; /* Центрирование содержимого по вертикали */
+    width: 100%; /* Полоса растягивается на всю ширину экрана */
+    height: 60px; /* Увеличиваем высоту полосы */
+    z-index: 19; /* Убедитесь, что полоса находится под меню и над другими элементами */
 }
 
-/* Стилизация иконки меню и надписи "Menu" */
-.menu-icon {
+.menu-icon, .menu-text {
     cursor: pointer;
     color: #00BFFF; /* Светло-синий текст */
-    font-size: 20px; /* Размер текста */
-    margin-left: 20px; /* Отступ слева для иконки и текста */
-}
-
-/* Стили для ссылок в навигационной панели */
-nav a {
-    color: #00BFFF; /* Цвет текста ссылок */
-    text-decoration: none;
-    margin: 0 20px;
-    font-family: 'Press Start 2P', cursive;
+    font-size: 20px; /* Размер надписи Menu */
+    position: fixed;
+    top: 15px; /* Центрируем по высоте относительно новой высоты .menu-bar */
+    left: 20px;
+    z-index: 20; /* Убедитесь, что иконка и текст находятся над фоновой полосой */
 }
 
 #navbar a {
