@@ -143,17 +143,27 @@ body, html {
 
 .buy-now-btn {
     padding: 10px 15px; /* Немного уменьшаем горизонтальный паддинг */
-    margin-right: 10px; /* Добавляем небольшой отступ справа, если кнопка находится в правой части меню */
-    font-size: 12px; /* Уменьшаем размер шрифта, чтобы кнопка выглядела компактнее */
-    width: auto; /* Автоматическая ширина, чтобы контейнер подстраивался под содержимое */
-    min-width: 100px; /* Минимальная ширина, чтобы обеспечить достаточно места для текста */
-    text-align: center; /* Центрирование текста внутри кнопки */
+    background-color: #007bff; /* Светло-синий фон */
+    color: #FFF; /* Белый текст */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Уменьшенный размер шрифта */
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: inline-block; /* Для правильного отображения эффектов */
+    text-decoration: none;
+    box-shadow: 0 0 10px #00bfff; /* Светящаяся тень */
+    position: relative; /* Для возможного абсолютного позиционирования */
+    z-index: 9;
+    margin-right: 20px; /* Добавляем отступ справа, если нужно */
 }
 
 .buy-now-btn:hover, .buy-now-btn:active {
     background-color: #0056b3; /* Темнее синий при наведении */
     box-shadow: 0 0 15px #00bfff; /* Увеличенная светящаяся тень */
-    transform: scale(1.05); /* Небольшое увеличение при наведении для акцента */
+    transform: scale(1.05); /* Увеличение размера при наведении */
 }
 
 @media (max-width: 768px) {
