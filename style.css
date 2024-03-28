@@ -8,13 +8,13 @@ body, html {
 
 /* Создаем визуальную полосу для иконки меню и надписи */
 .menu-bar {
-    background-color: #003366; /* Цвет фона полосы такой же, как у меню */
+    background-color: #003366;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Полоса растягивается на всю ширину экрана */
-    padding: 15px 0; /* Паддинг сверху и снизу для полосы */
-    z-index: 19; /* Убедитесь, что полоса находится под меню и над другими элементами */
+    width: 100%;
+    padding: 15px 0;
+    z-index: 19;
     display: flex;
     align-items: center;
     padding-left: 10px;
@@ -22,16 +22,16 @@ body, html {
 
 .menu-icon {
     cursor: pointer;
-    color: #00BFFF; /* Светло-синий текст */
-    font-size: 19px; /* Увеличиваем размер для иконки гамбургера */
-    z-index: 20; /* Убедитесь, что иконка находится над фоновой полосой */
+    color: #00BFFF;
+    font-size: 22px; /* Увеличиваем для соответствия с размером текста */
+    z-index: 20;
 }
 
 .menu-text {
-    color: #00BFFF; /* Светло-синий текст */
-    font-size: 17px; /* Размер текста для "Menu" */
-    margin-left: 10px; /* Отступ между иконкой гамбургера и текстом */
-    z-index: 20; /* Убедитесь, что текст находится над фоновой полосой */
+    color: #00BFFF;
+    font-size: 20px;
+    margin-left: 8px;
+    z-index: 20;
 }
 
 #navbar {
@@ -40,11 +40,11 @@ body, html {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #003366; /* Темный синий фон */
+    background-color: #003366;
     overflow-x: hidden;
-    transition: 0.5s; /* Плавное появление и скрытие */
+    transition: 0.5s;
     padding-top: 60px;
-    z-index: 15; /* Убедитесь, что меню выше фоновой полосы, но ниже иконки и текста */
+    z-index: 15;
 }
 
 #navbar a {
@@ -142,7 +142,7 @@ body, html {
 }
 
 .buy-now-btn {
-    padding: 10px 10px; /* Небольшие отступы по бокам от текста */
+    padding: 10px 20px; /* Небольшие отступы по бокам от текста */
     background-color: #007bff; /* Светло-синий фон */
     color: #FFF; /* Белый текст */
     border: none;
@@ -157,7 +157,9 @@ body, html {
     box-shadow: 0 0 10px #00bfff; /* Светящаяся тень */
     position: relative; /* Для возможного абсолютного позиционирования */
     z-index: 9;
-    margin-right: 20px; /* Добавим отступ справа, если кнопка находится в правой части экрана */
+    margin: 0 10px; /* Добавим отступ справа, если кнопка находится в правой части экрана */
+    width: auto;
+    box-sizing: border-box;
 }
 
 .buy-now-btn:hover, .buy-now-btn:active {
