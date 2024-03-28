@@ -120,6 +120,30 @@ body, html {
     line-height: 1.5; /* Увеличенное расстояние между строками */
 }
 
+buy-now-btn {
+    width: 200px; /* Фиксированная ширина кнопки */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    background-color: #4caf50; /* Светло-синий фон */
+    color: #FFF; /* Белый текст */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Размер шрифта */
+    font-family: 'Press Start 2P', cursive; /* Пиксельный шрифт */
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: center; /* Текст по центру */
+    display: block; /* Блочное отображение для правильного выравнивания */
+    margin: 0 auto; /* Автоматические отступы для центрирования */
+    box-shadow: 0 0 10px #00bfff; /* Светящаяся тень */
+}
+
+.buy-now-btn:hover, .buy-now-btn:active {
+    background-color: #0056b3; /* Темнее синий при наведении */
+    box-shadow: 0 0 15px #00bfff; /* Увеличенная светящаяся тень */
+    transform: scale(1.05); /* Увеличение размера */
+}
+
 @media (max-width: 768px) {
     .text-box {
         padding: 15px; /* Уменьшаем внутренние отступы */
@@ -149,4 +173,18 @@ body, html {
     }
 
     /* Адаптация отступов и размеров других элементов, если это необходимо */
+}
+/* Стили для адаптации под мобильные устройства */
+@media (max-width: 767px) {
+    .buy-now-btn {
+        width: 80%; /* Процент ширины экрана */
+        margin: 0 auto; /* Центрирование кнопки */
+        display: block; /* Блочное отображение */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #navbar.active {
+        width: 100%; /* Меню на весь экран для мобильных версий */
+    }
 }
