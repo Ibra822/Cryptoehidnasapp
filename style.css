@@ -152,7 +152,7 @@ body, html {
     font-family: 'Press Start 2P', cursive;
     text-transform: uppercase;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    display: inline-block; /* Для правильного отображения эффектов */
+    display: flex; /* Для правильного отображения эффектов */
     text-decoration: none;
     box-shadow: 0 0 10px #00bfff; /* Светящаяся тень */
     position: relative; /* Для возможного абсолютного позиционирования */
@@ -160,6 +160,9 @@ body, html {
     margin: 0 10px; /* Добавим отступ справа, если кнопка находится в правой части экрана */
     width: auto;
     box-sizing: border-box;
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    align-items: center; /* Центрирование содержимого по вертикали */
+    text-align: center;
 }
 
 .buy-now-btn:hover, .buy-now-btn:active {
