@@ -1,28 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body, html {
+    font-family: 'Press Start 2P', cursive;
     margin: 0;
-    padding: 0;
-    background: url('background2.png') no-repeat center center fixed; 
+    background: url('background.png') no-repeat center center fixed; 
     background-size: cover;
+    overflow-x: hidden;
 }
 
-nav {
-    background-color: #003366; /* Темный синий фон */
-    padding: 10px;
-    text-align: center;
+/* Создаем визуальную полосу для иконки меню и надписи */
+.menu-bar {
+    background-color: #003366;
     position: fixed;
-    width: 100%;
     top: 0;
-    z-index: 10;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 19;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
 }
 
-nav a {
-    color: #00BFFF; /* Цвет текста ссылок */
-    text-decoration: none;
-    margin: 0 20px;
-    font-family: 'Press Start 2P', cursive; /* Подтверждаем использование пиксельного шрифта для меню */
+.menu-icon {
+    cursor: pointer;
+    color: #00BFFF;
+    font-size: 22px; /* Увеличиваем для соответствия с размером текста */
+    z-index: 20;
 }
+
+.menu-text {
+    color: #00BFFF;
+    font-size: 20px;
+    margin-left: 8px;
+    z-index: 20;
+}
+
+#navbar {
+    height: 100%;
+    width: 0; /* Изначально меню скрыто */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #003366; /* Цвет фона меню */
+    overflow-x: hidden;
+    transition: width 0.5s; /* Плавное открытие и закрытие меню */
+    z-index: 15;
+    display: flex;
+    flex-direction: column; /* Стекаем элементы вертикально */
+    justify-content: center; /* Центрируем элементы по вертикали */
+    align-items: center; /* Центрируем элементы по горизонтали */
+    padding-top: 35px;
+    transform: translateX(-100%); /* Изначальное состояние за пределами экрана */
+
+}
+
+#navbar a {
+    padding: 10px 22px; /* Вертикальные отступы увеличены */
+    margin: 8px 0; /* Добавлены отступы между элементами */
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    transition: 0.3s;
+    text-align: center; /* Центрируем текст ссылок */
+}
+
+/* Класс для активного состояния меню */
+#navbar.active {
+    width: 250px; /* Ширина меню при открытии на десктопах */
+    transform: translateX(0%); /* При активации класса возвращаем на экран */
+
+}
+
+@media screen and (max-width: 767px) {
+    #navbar.active {
+        width: 100%; /* Меню на весь экран для мобильных версий */
+    }
+}
+/* Стили для контейнера иконок, который будет размещен в правом верхнем углу */
+.social-icons {
+    position: fixed;
+    right: 10px;
+    top: 0;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    z-index: 20;
+}
+
+.social-icon {
+    color: #00BFFF; /* Matching the color with the menu text */
+    font-size: 22px; /* Adjusting the size */
+    margin-right: 20px; /* Spacing between the icons */
+}
+
+.social-icon i {
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.social-icon:hover i {
+    color: #009FDF; /* Slightly darker on hover for better interaction */
+}
+
+/* Ensuring the icon color does not change after clicking */
+.social-icon:visited {
+    color: #00BFFF; /* Keeping the color consistent with the unclicked state */
+}
+
 
 .text-box {
     background: rgba(255, 255, 255, 0.8);
