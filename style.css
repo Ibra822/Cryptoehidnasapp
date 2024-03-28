@@ -77,7 +77,7 @@ body, html {
 }
 
 /* Icon container to hold both icons */
-.icon-container {
+.social-icons {
     position: fixed;
     top: 0;
     right: 10px; /* Adjust as needed for proper alignment */
@@ -88,7 +88,7 @@ body, html {
 }
 
 /* Individual icon styling */
-.icon-container a {
+.social-icons a {
     color: #00BFFF; /* Light blue text color */
     font-size: 20px; /* Icon size */
     margin-left: 8px; /* Space between icons */
@@ -96,7 +96,7 @@ body, html {
 }
 
 /* Additional hover effect for icons */
-.icon-container a:hover {
+.social-icons a:hover {
     color: #ffffff; /* Change color on hover */
 }
 
