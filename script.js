@@ -9,8 +9,7 @@ document.getElementById('copyButton').addEventListener('click', function() {
 // Функция для переключения меню
 function toggleMenu() {
     var navbar = document.getElementById("navbar");
-    // Переключаем класс 'active', который контролирует отображение меню
-    navbar.classList.toggle('active');
+    navbar.classList.toggle("active");
 }
 
 // Инициализация слушателя событий
