@@ -1,71 +1,53 @@
 body, html {
     font-family: 'Press Start 2P', cursive;
     margin: 0;
-    background: url('background.png') no-repeat center center fixed;
+    background: url('background.png') no-repeat center center fixed; 
     background-size: cover;
     overflow-x: hidden;
 }
 
-/* Стили для nav изменены для поддержки скрытого состояния и анимации */
-/* Остальные стили остаются без изменений */
+.menu-icon {
+    cursor: pointer;
+    color: #00BFFF; /* Светло-синий текст */
+    font-size: 20px; /* Увеличиваем размер для надписи Menu */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 20;
+}
 
 #navbar {
-    background-color: #003366; /* Темный синий фон */
     height: 100%;
-    width: 80%; /* или любая желаемая ширина для меню */
+    width: 0;
     position: fixed;
-    z-index: 15;
     top: 0;
     left: 0;
+    background-color: #003366; /* Темный синий фон */
     overflow-x: hidden;
-    transition: transform 0.5s; /* Плавное открытие и закрытие */
-    transform: translateX(-100%); /* Изначально меню скрыто */
-    padding-top: 60px; /* Отступ сверху */
+    transition: 0.5s; /* Плавное появление и скрытие */
+    padding-top: 60px;
+    z-index: 15;
 }
 
-#navbar.active {
-    transform: translateX(0%); /* Показать меню */
-}
-
-@media (max-width: 768px) {
-    /* Дополнительные стили для адаптации под мобильные устройства */
-    .menu-icon, .menu-text {
-        display: block; /* Показать иконку меню и текст */
-    }
-
-    #navbar {
-        width: 100%; /* Меню на всю ширину для мобильных */
-    }
-
-    #navbar.active {
-        /* Нет изменений, меню показывается полностью */
-    }
-}
-
-.menu-icon, .menu-text {
-    color: #00BFFF;
-    cursor: pointer;
-    display: inline-block; /* Отображаем рядом */
+#navbar a {
+    padding: 10px 15px;
+    text-decoration: none;
     font-size: 16px;
-    margin-right: 20px; /* Отступ справа для иконки */
+    color: white;
+    display: block;
+    transition: 0.3s;
 }
 
-/* Обеспечиваем видимость .menu-icon и .menu-text на всех устройствах */
-.header-title {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Иконка меню и текст "Menu" слева */
-    background-color: #003366;
-    width: 100%;
-    padding: 10px;
-    position: fixed;
-    top: 0;
-    z-index: 10;
+/* Адаптация под разные размеры экранов */
+@media screen and (min-width: 768px) {
+    #navbar { /* Для десктопных версий */
+        width: 250px; /* Фиксированная ширина меню */
+    }
 }
 
-@media (max-width: 768px) {
-    nav a {
-        display: block; /* Ссылки блочные, для вертикального списка */
+@media screen and (max-width: 767px) {
+    #navbar { /* Для мобильных версий */
+        width: 100%; /* Меню на весь экран */
     }
 }
 
