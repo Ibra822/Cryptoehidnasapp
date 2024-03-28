@@ -1,36 +1,41 @@
 body, html {
     font-family: 'Press Start 2P', cursive;
     margin: 0;
-    background: url('background.png') no-repeat center center fixed; 
+    background: url('background.png') no-repeat center center fixed;
     background-size: cover;
     overflow-x: hidden;
 }
 
-.menu-icon {
+/* Создаем панель для иконки меню и текста */
+.menu-panel {
+    background-color: #003366; /* Темный синий фон, аналогично меню */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Панель тянется на всю ширину */
+    z-index: 10; /* Убедитесь, что панель находится под меню */
+    padding: 10px 0; /* Небольшой отступ сверху и снизу */
+}
+
+.menu-icon, .menu-text {
     cursor: pointer;
     color: #00BFFF; /* Светло-синий текст */
-    font-size: 20px; /* Увеличиваем размер для надписи Menu */
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 20;
+    font-size: 20px; /* Размер для надписи Menu */
+    z-index: 20; /* Убедитесь, что иконка и текст выше фона */
+    padding: 10px; /* Дополнительный отступ для лучшей видимости */
 }
 
 #navbar {
     height: 100%;
-    width: 250px; /* Устанавливаем фиксированную ширину для десктопных версий */
+    width: 0; /* Скрыто по умолчанию */
     position: fixed;
     top: 0;
-    left: -250px; /* Изначально скрываем меню за пределами экрана */
+    left: 0;
     background-color: #003366; /* Темный синий фон */
     overflow-x: hidden;
-    transition: all 0.5s; /* Плавное появление и скрытие */
-    padding-top: 60px;
-    z-index: 15;
-}
-
-#navbar.active {
-    left: 0; /* Показываем меню */
+    transition: 0.5s; /* Плавное появление и скрытие */
+    padding-top: 60px; /* Отступ сверху для содержимого меню */
+    z-index: 15; /* Убедитесь, что меню выше панели */
 }
 
 #navbar a {
@@ -42,14 +47,20 @@ body, html {
     transition: 0.3s;
 }
 
-@media screen and (max-width: 767px) {
-    #navbar { /* Для мобильных версий */
-        width: 100%; /* Меню на весь экран */
-        left: -100%; /* Изначально скрываем меню за пределами экрана */
-    }
+#navbar.active {
+    width: 250px; /* Ширина активного меню */
+}
 
-    #navbar.active {
-        left: 0; /* Показываем меню */
+/* Адаптация под разные размеры экранов */
+@media screen and (min-width: 768px) {
+    #navbar.active { /* Для десктопных версий */
+        width: 250px; /* Фиксированная ширина меню */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #navbar.active { /* Для мобильных версий */
+        width: 100%; /* Меню на весь экран */
     }
 }
 
