@@ -36,28 +36,34 @@ body, html {
 
 #navbar {
     height: 100%;
-    width: 0;
+    width: 0; /* Изначально меню скрыто */
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #003366;
+    background-color: #003366; /* Цвет фона меню */
     overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    transition: width 0.5s; /* Плавное открытие и закрытие меню */
     z-index: 15;
+    display: flex;
+    flex-direction: column; /* Стекаем элементы вертикально */
+    justify-content: center; /* Центрируем элементы по вертикали */
+    align-items: center; /* Центрируем элементы по горизонтали */
+    padding-top: 60px;
 }
 
 #navbar a {
-    padding: 10px 15px;
+    padding: 8px 20px; /* Вертикальные отступы увеличены */
+    margin: 8px 0; /* Добавлены отступы между элементами */
     text-decoration: none;
     font-size: 16px;
     color: white;
-    display: block;
     transition: 0.3s;
+    text-align: center; /* Центрируем текст ссылок */
 }
 
+/* Класс для активного состояния меню */
 #navbar.active {
-    width: 250px; /* Фиксированная ширина меню для десктопов */
+    width: 250px; /* Ширина меню при открытии на десктопах */
 }
 
 @media screen and (max-width: 767px) {
@@ -141,22 +147,21 @@ body, html {
     transform: scale(1.1);
 }
 
-.buy-now-btn {
-    width: 200px; /* Фиксированная ширина кнопки */
-    padding: 10px 20px; /* Отступы внутри кнопки */
+buy-now-btn {
+    padding: 10px 20px;
+    margin-top: 15px; /* Добавляем отступ сверху */
+    font-size: 14px; /* Уменьшенный размер шрифта */
     background-color: #007bff; /* Светло-синий фон */
     color: #FFF; /* Белый текст */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px; /* Размер шрифта */
-    font-family: 'Press Start 2P', cursive; /* Пиксельный шрифт */
     text-transform: uppercase;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    text-align: center; /* Текст по центру */
-    display: block; /* Блочное отображение для правильного выравнивания */
-    margin: 0 auto; /* Автоматические отступы для центрирования */
+    text-decoration: none;
     box-shadow: 0 0 10px #00bfff; /* Светящаяся тень */
+    display: inline-block; /* Для правильного отображения эффектов */
+    z-index: 9;
 }
 
 .buy-now-btn:hover, .buy-now-btn:active {
@@ -209,5 +214,11 @@ body, html {
         width: 80%; /* Процент ширины экрана */
         margin: 0 auto; /* Центрирование кнопки */
         display: block; /* Блочное отображение */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #navbar.active {
+        width: 100%; /* Меню на весь экран для мобильных версий */
     }
 }
