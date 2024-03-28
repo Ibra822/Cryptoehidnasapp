@@ -75,29 +75,27 @@ body, html {
         width: 100%; /* Меню на весь экран для мобильных версий */
     }
 }
-
-/* Icon container to hold both icons */
+/* Стили для контейнера иконок, который будет размещен в правом верхнем углу */
 .social-icons {
     position: fixed;
-    top: 0;
-    right: 10px; /* Adjust as needed for proper alignment */
-    z-index: 20; /* Ensures icons stay on top */
-    display: flex;
-    align-items: center; /* Centers icons vertically within the container */
-    height: 100%; /* Match the height of the menu bar for vertical centering */
+    right: 10px; /* Отступ справа */
+    top: 0; /* Выравниваем по верхнему краю */
+    padding: 15px 0; /* Паддинг сверху и снизу для выравнивания по центру полосы */
+    display: flex; /* Для горизонтального выравнивания иконок */
+    align-items: center; /* Центрирование иконок по вертикали */
+    z-index: 20; /* Убедитесь, что иконки находятся над фоновой полосой */
 }
 
-/* Individual icon styling */
-.social-icons a {
-    color: #00BFFF; /* Light blue text color */
-    font-size: 20px; /* Icon size */
-    margin-left: 8px; /* Space between icons */
-    text-decoration: none; /* Removes underline from links */
+/* Стиль для каждой иконки */
+.social-icon {
+    color: #00BFFF; /* Цвет иконок */
+    font-size: 20px; /* Размер иконок */
+    margin-left: 8px; /* Отступ между иконками */
 }
 
-/* Additional hover effect for icons */
-.social-icons a:hover {
-    color: #ffffff; /* Change color on hover */
+/* Пример использования с классом Font Awesome */
+.social-icon.fa {
+    font-family: FontAwesome; /* Убедитесь, что подключен шрифт Font Awesome */
 }
 
 .hero {
