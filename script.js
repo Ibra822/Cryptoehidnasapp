@@ -1,35 +1,21 @@
-// Функция для отображения модального окна
+// Функция для отображения модального окна с анимацией
 function showModal() {
     var modal = document.getElementById('copyModal');
-    modal.classList.add('display-flex'); // Добавляем класс для flex display
+    modal.classList.add('show');
+    setTimeout(function() { // Устанавливаем таймер на исчезновение модального окна
+        modal.classList.remove('show');
+    }, 2000); // Модальное окно будет показано на 2 секунды
 }
-// Функция для скрытия модального окна
-function hideModal() {
-    var modal = document.getElementById('copyModal');
-    modal.classList.remove('display-flex'); // Удаляем класс для flex display
-    modal.style.display = "none"; // Скрываем модальное окно
-}
-// Обработчик клика для копирования адреса и отображения модального окна
+
+// Обработчик события клика для кнопки копирования
 document.getElementById('copyButton').addEventListener('click', function() {
     navigator.clipboard.writeText('G6nfBpQqTtXYRwnacQkYieGp8ycdod1wEPcjDNkBXfyh')
-    .then(() => {
-        showModal();
-        setTimeout(hideModal, 2000); // Автоматическое скрытие модального окна через 2 секунды
-    })
-    .catch(err => {
-        console.error('Error in copying text: ', err);
+    .then(showModal)
+    .catch(function(err) {
+        console.error('Ошибка при копировании: ', err);
     });
 });
-// Обработчик клика для закрытия модального окна при клике на кнопку (x)
-document.querySelector('.close').addEventListener('click', hideModal);
 
-// Обработчик клика для закрытия модального окна при клике вне его области
-window.addEventListener('click', function(event) {
-    var modal = document.getElementById('copyModal');
-    if (event.target === modal) {
-        hideModal();
-    }
-});
 
 // Функция для переключения видимости меню
 function toggleMenu() {
