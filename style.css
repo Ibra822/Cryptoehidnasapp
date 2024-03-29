@@ -190,40 +190,38 @@ body, html {
     background-color: #0056b3; /* Темнее синий при наведении */
     transform: scale(1.1);
 }
-/* Стиль модального окна */
+/* Стили модального окна */
 .modal {
   display: none; /* Скрыто по умолчанию */
-  position: fixed;
-  z-index: 1; /* Сидит на вершине */
+  position: fixed; /* Фиксированное позиционирование */
   left: 0;
   top: 0;
-  width: 100%; /* Полная ширина */
-  height: 100%; /* Полная высота */
-  overflow: auto; /* Включить прокрутку, если необходимо */
-  background-color: rgb(0,0,0); /* Цвет фона */
-  background-color: rgba(0,0,0,0.4); /* Чёрный с прозрачностью */
+  width: 100%; /* Ширина на весь экран */
+  height: 100%; /* Высота на весь экран */
+  background-color: rgba(0, 0, 0, 0.5); /* Чёрный фон с прозрачностью */
+  align-items: center; /* Выравнивание содержимого по центру по вертикали */
+  justify-content: center; /* Выравнивание содержимого по центру по горизонтали */
+  display: flex; /* Использование flexbox для выравнивания */
 }
 
-/* Стиль контента модального окна */
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% сверху и по центру */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Можно адаптировать под разные размеры */
+  background-color: #fefefe; /* Белый фон для содержимого */
+  padding: 20px; /* Отступы внутри содержимого */
+  border: 1px solid #888; /* Рамка вокруг содержимого */
+  width: 80%; /* Ширина содержимого */
+  text-align: center; /* Выравнивание текста по центру */
 }
 
-/* Кнопка закрытия (x) */
 .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+  color: #aaaaaa; /* Цвет символа 'x' */
+  float: right; /* Расположение 'x' справа */
+  font-size: 28px; /* Размер шрифта для 'x' */
+  font-weight: bold; /* Жирное начертание для 'x' */
 }
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #000; /* Цвет символа 'x' при наведении и фокусировке */
   text-decoration: none;
   cursor: pointer;
 }
