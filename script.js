@@ -1,21 +1,37 @@
-// Функция для отображения модального окна с анимацией
+// Эта функция отображает модальное окно
 function showModal() {
     var modal = document.getElementById('copyModal');
-    modal.classList.add('show');
-    setTimeout(function() { // Устанавливаем таймер на исчезновение модального окна
-        modal.classList.remove('show');
-    }, 2000); // Модальное окно будет показано на 2 секунды
+    modal.classList.add('show'); // Это добавляет класс .show, который устанавливает display: block и начинает анимацию
 }
 
-// Обработчик события клика для кнопки копирования
+// Эта функция скрывает модальное окно
+function hideModal() {
+    var modal = document.getElementById('copyModal');
+    modal.classList.remove('show'); // Это удаляет класс .show, возвращая display: none и завершая анимацию
+}
+
+// Функция для обработки копирования
 document.getElementById('copyButton').addEventListener('click', function() {
     navigator.clipboard.writeText('G6nfBpQqTtXYRwnacQkYieGp8ycdod1wEPcjDNkBXfyh')
-    .then(showModal)
-    .catch(function(err) {
-        console.error('Ошибка при копировании: ', err);
+    .then(() => {
+        showModal(); // Показать модальное окно
+        setTimeout(hideModal, 2000); // Автоматически скрыть модальное окно через 2 секунды
+    })
+    .catch(err => {
+        console.error('Error in copying text: ', err);
     });
 });
 
+// Закрытие модального окна при клике на (x)
+document.querySelector('.close').addEventListener('click', hideModal);
+
+// Закрытие модального окна при клике вне его области
+window.addEventListener('click', function(event) {
+    var modal = document.getElementById('copyModal');
+    if (event.target === modal) {
+        hideModal();
+    }
+});
 
 // Функция для переключения видимости меню
 function toggleMenu() {
