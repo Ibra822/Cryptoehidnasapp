@@ -192,20 +192,19 @@ body, html {
 }
 /* Стили для модального окна */
 .modal {
-    display: none;
+    display: none; /* Скрыть модальное окно по умолчанию */
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) scale(0.5);
-    width: auto;
-    background-color: #003366; /* темно-синий фон */
-    color: white; /* белый текст */
-    border-radius: 10px; /* закругленные углы */
+    background-color: #003366; /* Темно-синий фон */
+    color: white; /* Белый текст */
+    border-radius: 10px; /* Закругленные углы */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     opacity: 0;
-    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s; /* Плавное появление и исчезновение */
 }
 
 /* Анимация появления модального окна */
@@ -214,17 +213,13 @@ body, html {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
 }
-/* Содержимое модального окна */
+
+/* Стили для содержимого модального окна */
 .modal-content {
-    background-color: #fefefe;
-    padding: 20px;
-    border: 1px solid #888;
-    width: auto; /* Автоматический подбор ширины */
-    max-width: 300px; /* Максимальная ширина */
-    margin: auto; /* Автоматическое центрирование */
     text-align: center; /* Текст по центру */
 }
-/* Кнопка закрыть */
+
+/* Стили для кнопки закрыть */
 .close {
     color: #aaa;
     float: right;
