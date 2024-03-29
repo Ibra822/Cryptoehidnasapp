@@ -192,20 +192,27 @@ body, html {
 }
 /* Стили для модального окна */
 .modal {
-    display: none; /* Скрыть модальное окно по умолчанию */
+    display: none;
     position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Полупрозрачный фон */
-    z-index: 1000; /* Убедитесь, что модальное окно находится выше других элементов */
-    justify-content: center;
-    align-items: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    width: auto;
+    background-color: #003366; /* темно-синий фон */
+    color: white; /* белый текст */
+    border-radius: 10px; /* закругленные углы */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
 }
-/* При отображении модального окна, применяем display: flex */
-.modal.display-flex {
-    display: flex;
+
+/* Анимация появления модального окна */
+.modal.show {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
 }
 /* Содержимое модального окна */
 .modal-content {
