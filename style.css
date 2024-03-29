@@ -190,38 +190,39 @@ body, html {
     background-color: #0056b3; /* Темнее синий при наведении */
     transform: scale(1.1);
 }
-/* Стили для модального окна */
+/* Стиль модального окна */
 .modal {
-  display: none; /* Скрыть модальное окно по умолчанию */
-  position: fixed; /* Остается на месте при прокрутке */
+  display: none; /* Скрыто по умолчанию */
+  position: fixed;
+  z-index: 1; /* Сидит на вершине */
   left: 0;
   top: 0;
   width: 100%; /* Полная ширина */
   height: 100%; /* Полная высота */
-  background-color: rgba(0, 0, 0, 0.4); /* Черный фон с прозрачностью */
-  z-index: 1000; /* Убедитесь, что окно будет сверху всех элементов */
+  overflow: auto; /* Включить прокрутку, если необходимо */
+  background-color: rgb(0,0,0); /* Цвет фона */
+  background-color: rgba(0,0,0,0.4); /* Чёрный с прозрачностью */
 }
 
-/* Стили для контента модального окна */
+/* Стиль контента модального окна */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% от верха и автоматические отступы по бокам */
+  margin: 15% auto; /* 15% сверху и по центру */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Ширина контента */
-  z-index: 1001;
+  width: 80%; /* Можно адаптировать под разные размеры */
 }
 
-/* Стили для кнопки закрытия */
-.close-btn {
+/* Кнопка закрытия (x) */
+.close {
   color: #aaa;
-  float: right; /* Кнопка в правом верхнем углу */
-  font-size: 28px; /* Размер шрифта */
+  float: right;
+  font-size: 28px;
   font-weight: bold;
 }
 
-.close-btn:hover,
-.close-btn:focus {
+.close:hover,
+.close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
