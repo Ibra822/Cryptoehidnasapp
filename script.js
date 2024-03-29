@@ -1,42 +1,41 @@
-// Эта функция отображает модальное окно с анимацией
+// Функция для отображения модального окна
 function showModal() {
   var modal = document.getElementById('copyModal');
-  modal.classList.add('show');
-  modal.classList.remove('hide');
+  modal.style.display = "block";
+  modal.style.opacity = "1";
 }
 
-// Эта функция скрывает модальное окно с анимацией
+// Функция для скрытия модального окна
 function hideModal() {
   var modal = document.getElementById('copyModal');
-  modal.classList.add('hide');
-  setTimeout(() => {
-    modal.classList.remove('show', 'hide');
-    modal.style.display = "none"; // Это скроет модальное окно после завершения анимации исчезновения
-  }, 300); // Это значение должно соответствовать продолжительности вашей анимации исчезновения
+  modal.style.opacity = "0";
+  setTimeout(function() {
+    modal.style.display = "none";
+  }, 2000); // Скроет модальное окно после завершения анимации угасания
 }
 
-// Функция для обработки копирования
+// Функция для обработки копирования адреса
 document.getElementById('copyButton').addEventListener('click', function() {
   navigator.clipboard.writeText('G6nfBpQqTtXYRwnacQkYieGp8ycdod1wEPcjDNkBXfyh')
-    .then(() => {
-      showModal();
-      setTimeout(hideModal, 2000); // Скрываем модальное окно через 2 секунды
-    })
-    .catch(err => {
-      console.error('Error in copying text: ', err);
-    });
+  .then(() => {
+    showModal(); // Показываем модальное окно
+    setTimeout(hideModal, 2000); // Автоматически скрываем его через 2 секунды
+  })
+  .catch(err => {
+    console.error('Error in copying text: ', err);
+  });
 });
 
-// Закрытие модального окна при клике на (x)
+// Обработка клика на элементе с классом .close (крестик для закрытия модального окна)
 document.querySelector('.close').addEventListener('click', hideModal);
 
-// Закрытие модального окна при клике вне его области
-window.addEventListener('click', function(event) {
+// Обработка клика вне модального окна для его скрытия
+window.onclick = function(event) {
   var modal = document.getElementById('copyModal');
-  if (event.target === modal) {
+  if (event.target == modal) {
     hideModal();
   }
-});
+}
 
 // Функция для переключения видимости меню
 function toggleMenu() {
