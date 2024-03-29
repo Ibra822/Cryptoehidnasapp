@@ -58,7 +58,6 @@ body, html {
     align-items: center; /* Центрируем элементы по горизонтали */
     padding-top: 35px;
     transform: translateX(-100%); /* Изначальное состояние за пределами экрана */
-
 }
 
 #navbar a {
@@ -67,15 +66,19 @@ body, html {
     text-decoration: none;
     font-size: 16px;
     color: white;
-    transition: 0.3s;
+    transition: transform 0.3s ease, color 0.3s ease; /* Добавлен эффект увеличения */
+    display: block;
     text-align: center; /* Центрируем текст ссылок */
 }
 
-/* Класс для активного состояния меню */
+#navbar a:hover {
+    transform: scale(1.1); /* Эффект увеличения при наведении */
+    color: #00BFFF; /* Опционально: изменение цвета при наведении */
+}
+
 #navbar.active {
     width: 250px; /* Ширина меню при открытии на десктопах */
     transform: translateX(0%); /* При активации класса возвращаем на экран */
-
 }
 
 @media screen and (max-width: 767px) {
