@@ -36,6 +36,13 @@ body, html {
     z-index: 20;
 }
 
+.menu-trigger {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 20;
+}
+
 #navbar {
     height: 100%;
     width: 0; /* Изначально меню скрыто */
