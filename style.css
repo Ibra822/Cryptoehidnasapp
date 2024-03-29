@@ -190,6 +190,42 @@ body, html {
     background-color: #0056b3; /* Темнее синий при наведении */
     transform: scale(1.1);
 }
+/* Стили для модального окна */
+.modal {
+  display: none; /* Скрыть модальное окно по умолчанию */
+  position: fixed; /* Остается на месте при прокрутке */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  background-color: rgba(0, 0, 0, 0.4); /* Черный фон с прозрачностью */
+  z-index: 1000; /* Убедитесь, что окно будет сверху всех элементов */
+}
+
+/* Стили для контента модального окна */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% от верха и автоматические отступы по бокам */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Ширина контента */
+  z-index: 1001;
+}
+
+/* Стили для кнопки закрытия */
+.close-btn {
+  color: #aaa;
+  float: right; /* Кнопка в правом верхнем углу */
+  font-size: 28px; /* Размер шрифта */
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 buy-now-btn {
     width: 200px; /* Фиксированная ширина кнопки */
