@@ -1,39 +1,31 @@
-// Получаем элементы
-var copyButton = document.getElementById("copyButton");
-var modal = document.getElementById("modal");
-var closeButton = document.querySelector(".close-btn");
-
-// Функция для открытия модального окна
-function openModal() {
-  modal.style.display = "block";
-}
-
-// Функция для закрытия модального окна
-function closeModal() {
-  modal.style.display = "none";
-}
-
-// Слушатель событий для кнопки копирования
-copyButton.addEventListener("click", function() {
-  navigator.clipboard.writeText('G6nfBpQqTtXYRwnacQkYieGp8ycdod1wEPcjDNkBXfyh')
-  .then(() => {
-    openModal(); // Открыть модальное окно
-    setTimeout(closeModal, 2000); // Автоматически закрыть через 2 секунды
-  })
-  .catch(err => {
-    console.error('Error in copying text: ', err);
-  });
+document.getElementById('copyButton').addEventListener('click', function() {
+    navigator.clipboard.writeText('G6nfBpQqTtXYRwnacQkYieGp8ycdod1wEPcjDNkBXfyh')
+    .then(() => {
+        var modal = document.getElementById('myModal');
+        modal.style.display = "block";
+        setTimeout(function(){ modal.style.display = "none"; }, 2000);
+    })
+    .catch(err => {
+        console.error('Error in copying text: ', err);
+    });
 });
 
-// Слушатель событий для кнопки закрытия
-closeButton.addEventListener("click", closeModal);
+// Получаем элемент <span> который закрывает модальное окно
+var span = document.getElementsByClassName("close")[0];
 
-// Слушатель событий для клика за пределами модального окна
-window.addEventListener("click", function(event) {
-  if (event.target == modal) {
-    closeModal();
-  }
-});
+// Когда пользователь кликает на <span> (x), закрываем модальное окно
+span.onclick = function() {
+    var modal = document.getElementById('myModal');
+    modal.style.display = "none";
+}
+
+// Когда пользователь кликает в любом месте за пределами модального окна, закрываем его
+window.onclick = function(event) {
+    var modal = document.getElementById('myModal');
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
 
 // Функция для переключения видимости меню
 function toggleMenu() {
