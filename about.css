@@ -35,6 +35,12 @@ body, html {
     margin-left: 8px;
     z-index: 20;
 }
+.menu-trigger {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 20;
+}
 
 #navbar {
     height: 100%;
