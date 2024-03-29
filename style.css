@@ -191,26 +191,25 @@ body, html {
     transform: scale(1.1);
 }
 /* Стили модального окна */
+/* Стили модального окна */
 .modal {
   display: none; /* Скрыть модальное окно по умолчанию */
   position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%; /* Ширина на весь экран */
-  height: 100%; /* Высота на весь экран */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto; /* Автоматический подбор ширины */
+  height: auto; /* Автоматический подбор высоты */
   background-color: rgba(0, 0, 0, 0.4); /* Полупрозрачный фон */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 1000; /* Убедитесь, что окно находится над другими элементами */
 }
 
 /* Содержимое модального окна */
 .modal-content {
   background-color: #fefefe;
-  margin: auto; /* Автоматическое центрирование */
   padding: 20px;
   border: 1px solid #888;
-  width: auto; /* Автоматический подбор ширины */
+  width: 80%;
   max-width: 300px; /* Максимальная ширина */
 }
 
