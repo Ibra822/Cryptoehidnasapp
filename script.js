@@ -13,6 +13,6 @@ function toggleMenu() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Добавляем слушатель событий для иконки гамбургера
-    document.querySelector('.menu-icon').addEventListener('click', toggleMenu);
+    // Обновленный слушатель событий для объединенного элемента иконки и текста меню
+    document.querySelector('.menu-trigger').addEventListener('click', toggleMenu);
 });
