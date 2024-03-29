@@ -192,36 +192,39 @@ body, html {
 }
 /* Стили модального окна */
 .modal {
-  display: none; /* Скрыто по умолчанию */
-  position: fixed; /* Фиксированное позиционирование */
+  display: none; /* Скрыть модальное окно по умолчанию */
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%; /* Ширина на весь экран */
   height: 100%; /* Высота на весь экран */
-  background-color: rgba(0, 0, 0, 0.5); /* Чёрный фон с прозрачностью */
-  align-items: center; /* Выравнивание содержимого по центру по вертикали */
-  justify-content: center; /* Выравнивание содержимого по центру по горизонтали */
-  display: flex; /* Использование flexbox для выравнивания */
+  background-color: rgba(0, 0, 0, 0.4); /* Полупрозрачный фон */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Содержимое модального окна */
 .modal-content {
-  background-color: #fefefe; /* Белый фон для содержимого */
-  padding: 20px; /* Отступы внутри содержимого */
-  border: 1px solid #888; /* Рамка вокруг содержимого */
-  width: 80%; /* Ширина содержимого */
-  text-align: center; /* Выравнивание текста по центру */
+  background-color: #fefefe;
+  margin: auto; /* Автоматическое центрирование */
+  padding: 20px;
+  border: 1px solid #888;
+  width: auto; /* Автоматический подбор ширины */
+  max-width: 300px; /* Максимальная ширина */
 }
 
+/* Кнопка закрыть */
 .close {
-  color: #aaaaaa; /* Цвет символа 'x' */
-  float: right; /* Расположение 'x' справа */
-  font-size: 28px; /* Размер шрифта для 'x' */
-  font-weight: bold; /* Жирное начертание для 'x' */
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: #000; /* Цвет символа 'x' при наведении и фокусировке */
+  color: black;
   text-decoration: none;
   cursor: pointer;
 }
