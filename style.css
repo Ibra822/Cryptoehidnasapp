@@ -192,42 +192,31 @@ body, html {
 }
 /* Стили модального окна */
 .modal {
-  display: none; /* Скрыть модальное окно по умолчанию */
+  display: none;
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  width: auto; /* Автоматический подбор ширины */
-  height: auto; /* Автоматический подбор высоты */
-  background-color: rgba(0, 0, 0, 0.4); /* Полупрозрачный фон */
-  z-index: 1000; /* Убедитесь, что окно находится над другими элементами */
+  transform: translate(-50%, -50%) scale(0);
+  background-color: #002244; /* Темно-синий фон */
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Поверх всех элементов */
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Содержимое модального окна */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto; /* Автоматическое центрирование */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 50%;
-  max-width: 400px; /* Максимальная ширина */
-  text-align: center; /* Текст по центру */
-  box-shadow: none; /* Убрать тень */
+/* Анимация появления */
+.modal.show {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
-/* Кнопка закрыть */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+/* Анимация исчезновения */
+.modal.hide {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
 }
 
 buy-now-btn {
