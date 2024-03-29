@@ -23,10 +23,10 @@
         </div> 
         <!-- Navigation menu -->
         <nav id="navbar" class="navbar">
-            <a href="index.html">Home</a>
-            <a href="Presale.html">Presale</a>
-            <a href="about.html">About</a>
-            <a href="tokenomics.html">Tokenomics</a>
+            <a href="index">Home</a>
+            <a href="Presale">Presale</a>
+            <a href="about">About</a>
+            <a href="tokenomics">Tokenomics</a>
             <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=BTHdF3XNZ4f6VD9Ri3axfQ8kS3bCFoLLxXnXNNwMwa5c&inputAmount=0&fixed=in" class="buy-now-btn" target="_blank">Buy $EHID</a>
         </nav>
     </header>
