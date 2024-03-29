@@ -191,7 +191,6 @@ body, html {
     transform: scale(1.1);
 }
 /* Стили модального окна */
-/* Стили модального окна */
 .modal {
   display: none; /* Скрыть модальное окно по умолчанию */
   position: fixed;
@@ -207,10 +206,13 @@ body, html {
 /* Содержимое модального окна */
 .modal-content {
   background-color: #fefefe;
+  margin: auto; /* Автоматическое центрирование */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
-  max-width: 300px; /* Максимальная ширина */
+  width: 50%;
+  max-width: 400px; /* Максимальная ширина */
+  text-align: center; /* Текст по центру */
+  box-shadow: none; /* Убрать тень */
 }
 
 /* Кнопка закрыть */
