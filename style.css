@@ -197,14 +197,16 @@ body, html {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) scale(0.5);
-    background-color: #00bfff; /* Темно-синий фон */
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный */
     color: white; /* Белый текст */
-    border-radius: 10px; /* Закругленные углы */
+    border-radius: 5px; /* Закругленные углы */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     opacity: 0;
     transition: transform 0.3s, opacity 0.3s; /* Плавное появление и исчезновение */
+    width: auto; /* или конкретная ширина */
+    max-width: 300px; /* Максимальная ширина */
 }
 
 /* Анимация появления модального окна */
