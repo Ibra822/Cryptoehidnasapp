@@ -1,15 +1,14 @@
 // Функция для отображения модального окна
 function showModal() {
     var modal = document.getElementById('copyModal');
-    modal.style.display = "block";
+    modal.classList.add('display-flex'); // Добавляем класс для flex display
 }
-
 // Функция для скрытия модального окна
 function hideModal() {
     var modal = document.getElementById('copyModal');
-    modal.style.display = "none";
+    modal.classList.remove('display-flex'); // Удаляем класс для flex display
+    modal.style.display = "none"; // Скрываем модальное окно
 }
-
 // Обработчик клика для копирования адреса и отображения модального окна
 document.getElementById('copyButton').addEventListener('click', function() {
     navigator.clipboard.writeText('G6nfBpQqTtXYRwnacQkYieGp8ycdod1wEPcjDNkBXfyh')
@@ -21,7 +20,6 @@ document.getElementById('copyButton').addEventListener('click', function() {
         console.error('Error in copying text: ', err);
     });
 });
-
 // Обработчик клика для закрытия модального окна при клике на кнопку (x)
 document.querySelector('.close').addEventListener('click', hideModal);
 
