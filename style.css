@@ -136,10 +136,10 @@ body, html {
 }
 
 .neon-text {
-    color: #000000; /* Цвет текста в формате HEX */
+    color: #3dfd14; /* Цвет текста в формате HEX */
     text-shadow:
-        0 0 8px #00BFFF, /* Светло-серое свечение */
-        0 0 16px #f5f5f5; /* Светло-серое свечение */
+        0 0 8px #000000, /* Светло-серое свечение */
+        0 0 16px #000000; /* Светло-серое свечение */
     font-size: 32px;
     animation: pulse 2s infinite alternate;
 }
