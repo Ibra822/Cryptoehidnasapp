@@ -136,10 +136,10 @@ body, html {
 }
 
 .neon-text {
-    color: #00FF00; /* Яркий зеленый цвет текста */
+    color: #fe8e38; /* Цвет текста в формате HEX */
     text-shadow:
-        0 0 8px #fe8e38, 
-        0 0 16px #fe8e38;
+        0 0 8px #dcdcdc, /* Светло-серое свечение */
+        0 0 16px #dcdcdc; /* Светло-серое свечение */
     font-size: 32px;
     animation: pulse 2s infinite alternate;
 }
@@ -149,7 +149,7 @@ body, html {
         opacity: 1;
     }
     50% {
-        opacity: 0.5;
+        opacity: 0.7; /* Легкое затемнение для эффекта пульсации */
     }
     100% {
         opacity: 1;
