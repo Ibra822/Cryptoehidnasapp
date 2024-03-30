@@ -121,12 +121,13 @@ body, html {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 20px;
-    margin: 100px auto;
+    margin: 100px auto; /* Увеличенный отступ сверху для меню */
     max-width: 800px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: justify;
-    font-family: 'Press Start 2P', cursive;
-    line-height: 1.5;
+    text-align: left; /* Изменено на выравнивание по левому краю */
+    font-family: 'Press Start 2P', cursive; /* Возвращаем к изначальному шрифту */
+    font-size: 16px; /* Размер шрифта по вашему выбору */
+    line-height: 1.5; /* Увеличенное расстояние между строками */
 }
 
 buy-now-btn {
