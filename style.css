@@ -136,39 +136,23 @@ body, html {
 }
 
 .neon-text {
-    color: #E0FFFF; /* Светлый оттенок голубого для хорошей видимости на фоне */
+    color: #00FF00; /* Яркий зеленый цвет текста */
     text-shadow:
-        0 0 5px #A0A0A0, /* Мягкое серое свечение для читабельности */
-        0 0 10px #A0A0A0, /* Мягкое серое свечение для читабельности */
-        0 0 20px #A0A0A0, /* Мягкое серое свечение для читабельности */
-        0 0 30px #A0A0A0, /* Мягкое серое свечение для читабельности */
-        0 0 40px #A0A0A0, /* Мягкое серое свечение для читабельности */
-        0 0 50px #A0A0A0, /* Мягкое серое свечение для читабельности */
-        0 0 60px #A0A0A0; /* Мягкое серое свечение для читабельности */
-    animation: neon 1.5s ease-in-out infinite alternate;
+        0 0 8px #00FF00, 
+        0 0 16px #00FF00;
     font-size: 32px;
+    animation: pulse 2s infinite alternate;
 }
 
-@keyframes neon {
-    from {
-        text-shadow:
-            0 0 10px #A0A0A0,
-            0 0 20px #A0A0A0,
-            0 0 30px #A0A0A0,
-            0 0 40px #A0A0A0,
-            0 0 50px #A0A0A0,
-            0 0 60px #A0A0A0,
-            0 0 70px #A0A0A0;
+@keyframes pulse {
+    0% {
+        opacity: 1;
     }
-    to {
-        text-shadow:
-            0 0 5px #A0A0A0,
-            0 0 10px #A0A0A0,
-            0 0 15px #A0A0A0,
-            0 0 20px #A0A0A0,
-            0 0 25px #A0A0A0,
-            0 0 30px #A0A0A0,
-            0 0 35px #A0A0A0;
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
