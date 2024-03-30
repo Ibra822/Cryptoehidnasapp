@@ -136,15 +136,15 @@ body, html {
 }
 
 .neon-text {
-    color: #003366;
+    color: #003366; /* Dark blue text color */
     text-shadow:
-        0 0 5px #FFF,
-        0 0 10px #FFF,
-        0 0 20px #20FC8F,
-        0 0 30px #20FC8F,
-        0 0 40px #20FC8F,
-        0 0 50px #20FC8F,
-        0 0 60px #20FC8F;
+        0 0 5px #003366,
+        0 0 10px #003366,
+        0 0 20px #003366,
+        0 0 30px #003366,
+        0 0 40px #003366,
+        0 0 50px #003366,
+        0 0 60px #003366; /* Dark blue glow */
     animation: neon 1.5s ease-in-out infinite alternate;
     font-size: 32px;
 }
