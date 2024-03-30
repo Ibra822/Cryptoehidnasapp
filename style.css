@@ -138,8 +138,8 @@ body, html {
 .neon-text {
     color: #00FF00; /* Яркий зеленый цвет текста */
     text-shadow:
-        0 0 8px #00FF00, 
-        0 0 16px #00FF00;
+        0 0 8px #fe8e38, 
+        0 0 16px #fe8e38;
     font-size: 32px;
     animation: pulse 2s infinite alternate;
 }
