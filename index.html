@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpeg" href="favicon.jpeg">
     <title>Cryptoehidnas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <!-- Ensure Font Awesome is correctly included -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" as="style">
+    <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -17,13 +15,12 @@
             <div class="menu-trigger">
                 <span class="menu-icon">&#9776;</span>
                 <span class="menu-text">Menu</span>
-            <!-- Adding the social icons next to the menu -->
+            </div>
             <div class="social-icons">
                 <a href="https://t.me/cryptoehidnas" class="social-icon" target="_blank"><i class="fab fa-telegram-plane"></i></a>
                 <a href="https://twitter.com/cryptoehidnas" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
-        </div> 
-        <!-- Navigation menu -->
+        </div>
         <nav id="navbar" class="navbar">
             <a href="Presale">Presale</a>
             <a href="about">About</a>
@@ -33,11 +30,8 @@
     </header>
     <main>
         <section class="hero">
-            <script src="//megatimer.ru/get/806662ecb8025a9985f396f97c65d5e4.js"></script>
             <h1 class="neon-text">Cryptoehidnas Presale</h1>
-            <!-- Кнопка для копирования -->
             <button id="copyButton" class="copy-address-btn">Send SOL here</button>
-            <!-- Модальное окно для уведомления -->
             <div id="copyModal" class="modal">
               <div class="modal-content">
                 <span class="close">&times;</span>
@@ -46,5 +40,8 @@
             </div>
         </section>
     </main>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script defer src="//megatimer.ru/get/806662ecb8025a9985f396f97c65d5e4.js"></script>
 </body>
 </html>
