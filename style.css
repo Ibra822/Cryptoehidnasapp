@@ -136,7 +136,7 @@ body, html {
 }
 
 .neon-text {
-    color: #ff8e38; /* Цвет текста в формате HEX */
+    color: #0201ff; /* Цвет текста в формате HEX */
     text-shadow:
         0 0 8px #000000, /* Светло-серое свечение */
         0 0 16px #000000; /* Светло-серое свечение */
@@ -223,7 +223,7 @@ body, html {
 buy-now-btn {
     width: 200px; /* Фиксированная ширина кнопки */
     padding: 10px 20px; /* Отступы внутри кнопки */
-    background-color: #00BFFF; /* Светло-синий фон */
+    background-color: #00bfff; /* Светло-синий фон */
     color: #FFF; /* Белый текст */
     border: none;
     border-radius: 5px;
