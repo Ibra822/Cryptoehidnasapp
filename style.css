@@ -235,11 +235,11 @@ buy-now-btn {
     text-align: center; /* Текст по центру */
     display: block; /* Блочное отображение для правильного выравнивания */
     margin: 0 auto; /* Автоматические отступы для центрирования */
-    box-shadow: 0 0 10px #003366; /* Светящаяся тень */
+    box-shadow: 0 0 10px #007bff; /* Светящаяся тень */
 }
 
 .buy-now-btn:hover, .buy-now-btn:active {
-    background-color: #003366; /* Темнее синий при наведении */
+    background-color: #FFF; /* Темнее синий при наведении */
     box-shadow: 0 0 15px #00BFFF; /* Увеличенная светящаяся тень */
     transform: scale(1.05); /* Увеличение размера */
 }
