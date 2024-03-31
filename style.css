@@ -223,7 +223,7 @@ body, html {
 buy-now-btn {
     width: 200px; /* Фиксированная ширина кнопки */
     padding: 10px 20px; /* Отступы внутри кнопки */
-    background-color: #00bfff; /* Светло-синий фон */
+    background-color: #FFF; /* Светло-синий фон */
     color: #FFF; /* Белый текст */
     border: none;
     border-radius: 5px;
@@ -239,7 +239,7 @@ buy-now-btn {
 }
 
 .buy-now-btn:hover, .buy-now-btn:active {
-    background-color: #FFF; /* Темнее синий при наведении */
+    background-color: #003366; /* Темнее синий при наведении */
     box-shadow: 0 0 15px #00BFFF; /* Увеличенная светящаяся тень */
     transform: scale(1.05); /* Увеличение размера */
 }
